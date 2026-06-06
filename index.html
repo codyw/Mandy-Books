@@ -80,6 +80,20 @@ body{font-family:'Nunito','Quicksand',system-ui,-apple-system,sans-serif;backgro
 .five-author{font-size:12px;color:var(--ink-light);}
 .pill{display:inline-block;background:var(--mandy-bg);color:var(--mandy);font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px;}
 
+
+.tbr-note{font-size:12px;color:var(--ink-light);text-align:center;margin:-4px 0 14px;line-height:1.5;}
+.tbr-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);padding:8px 20px;}
+.tbr-row{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--border);}
+.tbr-row:last-child{border-bottom:none;}
+.tbr-rank{font-size:12px;font-weight:900;color:var(--mandy-mid);min-width:26px;flex-shrink:0;padding-top:2px;}
+.tbr-info{flex:1;min-width:0;}
+.tbr-title{font-size:14px;font-weight:800;color:var(--ink);line-height:1.3;}
+.tbr-author{font-size:12px;color:var(--ink-light);margin-top:1px;}
+.tbr-score{flex-shrink:0;text-align:right;padding-top:2px;}
+.tbr-avg{display:inline-block;background:var(--mandy-bg);color:var(--mandy);font-size:13px;font-weight:900;padding:3px 9px;border-radius:99px;white-space:nowrap;}
+.tbr-avg.unknown{background:var(--border);color:var(--ink-light);}
+.tbr-avg-lbl{font-size:9px;color:var(--ink-light);text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;font-weight:700;}
+.tbr-group-label{font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-light);text-align:center;margin:18px 0 4px;}
 </style>
 </head>
 <body>
@@ -90,286 +104,639 @@ body{font-family:'Nunito','Quicksand',system-ui,-apple-system,sans-serif;backgro
     <div class="page-header-name">Mandy</div>
     <div class="page-header-sub">Personal library · All-time</div>
   </div>
-
   <div class="hero-row">
-    <div class="hero-card accent">
-      <div class="hero-num">388</div>
-      <div class="hero-lbl">Books Rated</div>
-    </div>
-    <div class="hero-card">
-      <div class="hero-num">3.70</div>
-      <div class="hero-lbl">Mandy's Avg <span class="star-gold">★</span></div>
-    </div>
-    <div class="hero-card">
-      <div class="hero-num">105</div>
-      <div class="hero-lbl">Five-Stars</div>
-    </div>
+    <div class="hero-card accent"><div class="hero-num">392</div><div class="hero-lbl">Books Rated</div></div>
+    <div class="hero-card"><div class="hero-num">3.71</div><div class="hero-lbl">Mandy's Avg <span class="star-gold">★</span></div></div>
+    <div class="hero-card"><div class="hero-num">108</div><div class="hero-lbl">Five-Stars</div></div>
   </div>
-
   <div class="section-title">Rating Breakdown</div>
   <div class="dist-card">
-    <div class="dist-row"><div class="dist-star">5★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:81%"></div></div><div class="dist-count">105</div></div>
-    <div class="dist-row"><div class="dist-star">4★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:100%"></div></div><div class="dist-count">130</div></div>
-    <div class="dist-row"><div class="dist-star">3★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:74%"></div></div><div class="dist-count">96</div></div>
-    <div class="dist-row"><div class="dist-star">2★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:34%"></div></div><div class="dist-count">44</div></div>
-    <div class="dist-row"><div class="dist-star">1★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:10%"></div></div><div class="dist-count">13</div></div>
+    <div class="dist-row"><div class="dist-star">5★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:82.4%"></div></div><div class="dist-count">108</div></div>
+    <div class="dist-row"><div class="dist-star">4★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:100.0%"></div></div><div class="dist-count">131</div></div>
+    <div class="dist-row"><div class="dist-star">3★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:73.3%"></div></div><div class="dist-count">96</div></div>
+    <div class="dist-row"><div class="dist-star">2★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:33.6%"></div></div><div class="dist-count">44</div></div>
+    <div class="dist-row"><div class="dist-star">1★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:9.9%"></div></div><div class="dist-count">13</div></div>
   </div>
-
   <div class="section-title">By Year</div>
   <div class="year-grid">
-    <div class="year-card">
-      <div class="year-label">2024</div>
-      <div class="year-count">96</div>
-      <div class="year-unit">books rated</div>
-      <div class="year-avg">avg 3.47 ★</div>
-      <div class="year-five">20 five-stars</div>
-    </div>
-    <div class="year-card">
-      <div class="year-label">2025</div>
-      <div class="year-count">185</div>
-      <div class="year-unit">books rated</div>
-      <div class="year-avg">avg 3.64 ★</div>
-      <div class="year-five">44 five-stars</div>
-    </div>
-    <div class="year-card">
-      <div class="year-label">2026</div>
-      <div class="year-count">81</div>
-      <div class="year-unit">books rated</div>
-      <div class="year-avg">avg 4.09 ★</div>
-      <div class="year-five">33 five-stars</div>
-    </div>
+    <div class="year-card"><div class="year-label">2024</div><div class="year-count">98</div><div class="year-unit">books rated</div><div class="year-avg">3.49 avg ★</div><div class="year-five">21 five-stars</div></div>
+    <div class="year-card"><div class="year-label">2025</div><div class="year-count">195</div><div class="year-unit">books rated</div><div class="year-avg">3.63 avg ★</div><div class="year-five">48 five-stars</div></div>
+    <div class="year-card"><div class="year-label">2026</div><div class="year-count">86</div><div class="year-unit">books rated</div><div class="year-avg">4.12 avg ★</div><div class="year-five">36 five-stars</div></div>
   </div>
-
   <div class="section-title">Monthly Reading Volume</div>
-  <div class="vol-card">
-    <table class="vol-table">
-      <thead><tr><th>Month</th><th>Volume</th><th class="right">Books</th></tr></thead>
-      <tbody id="volBody"></tbody>
-    </table>
-  </div>
-
+  <div class="vol-card"><table class="vol-table">
+    <tr><th>Month</th><th>Books Read</th><th class="right">#</th></tr>
+    <tr class="vol-row"><td class="vol-month">Jan 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:19.2%"></div></div></td><td class="vol-count">5</td></tr>
+    <tr class="vol-row"><td class="vol-month">Feb 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:19.2%"></div></div></td><td class="vol-count">5</td></tr>
+    <tr class="vol-row"><td class="vol-month">Mar 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:19.2%"></div></div></td><td class="vol-count">5</td></tr>
+    <tr class="vol-row"><td class="vol-month">Apr 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:15.4%"></div></div></td><td class="vol-count">4</td></tr>
+    <tr class="vol-row"><td class="vol-month">May 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:26.9%"></div></div></td><td class="vol-count">7</td></tr>
+    <tr class="vol-row"><td class="vol-month">Jun 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:19.2%"></div></div></td><td class="vol-count">5</td></tr>
+    <tr class="vol-row"><td class="vol-month">Jul 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:26.9%"></div></div></td><td class="vol-count">7</td></tr>
+    <tr class="vol-row"><td class="vol-month">Aug 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:23.1%"></div></div></td><td class="vol-count">6</td></tr>
+    <tr class="vol-row"><td class="vol-month">Sep 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:30.8%"></div></div></td><td class="vol-count">8</td></tr>
+    <tr class="vol-row"><td class="vol-month">Oct 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:42.3%"></div></div></td><td class="vol-count">11</td></tr>
+    <tr class="vol-row"><td class="vol-month">Nov 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:57.7%"></div></div></td><td class="vol-count">15</td></tr>
+    <tr class="vol-row"><td class="vol-month">Dec 2024</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:88.5%"></div></div></td><td class="vol-count">23</td></tr>
+    <tr class="vol-row"><td class="vol-month">Jan 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:76.9%"></div></div></td><td class="vol-count">20</td></tr>
+    <tr class="vol-row"><td class="vol-month">Feb 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:76.9%"></div></div></td><td class="vol-count">20</td></tr>
+    <tr class="vol-row"><td class="vol-month">Mar 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:73.1%"></div></div></td><td class="vol-count">19</td></tr>
+    <tr class="vol-row"><td class="vol-month">Apr 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:50.0%"></div></div></td><td class="vol-count">13</td></tr>
+    <tr class="vol-row"><td class="vol-month">May 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:61.5%"></div></div></td><td class="vol-count">16</td></tr>
+    <tr class="vol-row"><td class="vol-month">Jun 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:42.3%"></div></div></td><td class="vol-count">11</td></tr>
+    <tr class="vol-row"><td class="vol-month">Jul 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:80.8%"></div></div></td><td class="vol-count">21</td></tr>
+    <tr class="vol-row"><td class="vol-month">Aug 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:61.5%"></div></div></td><td class="vol-count">16</td></tr>
+    <tr class="vol-row"><td class="vol-month">Sep 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:73.1%"></div></div></td><td class="vol-count">19</td></tr>
+    <tr class="vol-row"><td class="vol-month">Oct 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:69.2%"></div></div></td><td class="vol-count">18</td></tr>
+    <tr class="vol-row"><td class="vol-month">Nov 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:34.6%"></div></div></td><td class="vol-count">9</td></tr>
+    <tr class="vol-row"><td class="vol-month">Dec 2025</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:57.7%"></div></div></td><td class="vol-count">15</td></tr>
+    <tr class="vol-row"><td class="vol-month">Jan 2026</td><td><div class="vol-bar-wrap"><div class="vol-bar peak" style="width:100.0%"></div></div></td><td class="vol-count">26</td></tr>
+    <tr class="vol-row"><td class="vol-month">Feb 2026</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:57.7%"></div></div></td><td class="vol-count">15</td></tr>
+    <tr class="vol-row"><td class="vol-month">Mar 2026</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:61.5%"></div></div></td><td class="vol-count">16</td></tr>
+    <tr class="vol-row"><td class="vol-month">Apr 2026</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:69.2%"></div></div></td><td class="vol-count">18</td></tr>
+    <tr class="vol-row"><td class="vol-month">May 2026</td><td><div class="vol-bar-wrap"><div class="vol-bar" style="width:34.6%"></div></div></td><td class="vol-count">9</td></tr>
+  </table></div>
   <div class="section-title">By Author <span class="pill">3+ books read</span></div>
-  <div class="author-controls">
-    <button class="sort-btn active" id="sortBooks" onclick="sortAuthors('books')">Most Read</button>
-    <button class="sort-btn" id="sortAvg" onclick="sortAuthors('avg')">Highest Rated</button>
-  </div>
+  <div class="author-controls"><button class="sort-btn active" id="btnRead" onclick="sortAuthors('read')">Most Read</button><button class="sort-btn" id="btnRated" onclick="sortAuthors('rated')">Highest Rated</button></div>
   <div class="author-card" id="authorList"></div>
-
-  <div class="section-title">All Five-Star Reads <span class="pill">105</span></div>
-  <div class="fivelist-card" id="fiveList"></div>
-
-
-
-</div>
+  <div class="section-title">All Five-Star Reads <span class="pill">108</span></div>
+  <div class="fivelist-card">
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Just for the Summer</div><div class="five-author">Abby Jimenez</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Part of Your World</div><div class="five-author">Abby Jimenez</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Say You&#x27;ll Remember Me</div><div class="five-author">Abby Jimenez</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Fall Risk</div><div class="five-author">Abby Jimenez</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Worst Wingman Ever</div><div class="five-author">Abby Jimenez</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Yours Truly</div><div class="five-author">Abby Jimenez</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Battle of the Bookstores</div><div class="five-author">Ali Brady</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Below Zero</div><div class="five-author">Ali Hazelwood</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Check &amp; Mate</div><div class="five-author">Ali Hazelwood</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Love, Theoretically</div><div class="five-author">Ali Hazelwood</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Mate</div><div class="five-author">Ali Hazelwood</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Love Hypothesis</div><div class="five-author">Ali Hazelwood</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Under One Roof</div><div class="five-author">Ali Hazelwood</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Wedding People</div><div class="five-author">Alison Espach</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Frozen River</div><div class="five-author">Ariel Lawhon</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">And Now, Back to You</div><div class="five-author">B.K. Borison</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">First-Time Caller</div><div class="five-author">B.K. Borison</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Good Spirits</div><div class="five-author">B.K. Borison</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Brimstone</div><div class="five-author">Callie Hart</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Quicksilver</div><div class="five-author">Callie Hart</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Serpent and the Wings of Night</div><div class="five-author">Carissa Broadbent</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Binding 13</div><div class="five-author">Chloe Walsh</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Keeping 13</div><div class="five-author">Chloe Walsh</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Redeeming 6</div><div class="five-author">Chloe Walsh</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Saving 6</div><div class="five-author">Chloe Walsh</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Taming 7</div><div class="five-author">Chloe Walsh</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Accidentally Yours</div><div class="five-author">Christina Lauren</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">In a Holidaze</div><div class="five-author">Christina Lauren</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Exception to the Rule</div><div class="five-author">Christina Lauren</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Unhoneymooners</div><div class="five-author">Christina Lauren</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Spanish Love Deception</div><div class="five-author">Elena Armas</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Deal</div><div class="five-author">Elle Kennedy</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Fever Dream</div><div class="five-author">Elsie Silver</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Wild Card</div><div class="five-author">Elsie Silver</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Wild Eyes</div><div class="five-author">Elsie Silver</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Wild Love</div><div class="five-author">Elsie Silver</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Tweet Cute</div><div class="five-author">Emma Lord</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Kiss Quotient</div><div class="five-author">Helen Hoang</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Harry Potter and the Chamber of Secrets</div><div class="five-author">J.K. Rowling</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Harry Potter and the Sorcerer&#x27;s Stone</div><div class="five-author">J.K. Rowling</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Here For The Cake</div><div class="five-author">Jennifer Millikin</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">No Place Like You</div><div class="five-author">Jillian Meadows</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">An Academic Affair</div><div class="five-author">Jodi McAlister</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Drawn Together</div><div class="five-author">Juliana Smith</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">If It Makes You Happy</div><div class="five-author">Julie Olivia</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Plight Before Christmas</div><div class="five-author">Kate Stewart</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Sleight Before Christmas</div><div class="five-author">Kate Stewart</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Bodyguard</div><div class="five-author">Katherine Center</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Rom-Commers</div><div class="five-author">Katherine Center</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Not in My Book</div><div class="five-author">Katie Holt</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Last Page</div><div class="five-author">Katie Holt</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Camera Shy</div><div class="five-author">Kay Cove</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Hot Pursuit</div><div class="five-author">Kay Marie</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Love Dare</div><div class="five-author">Kay Marie</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Great Alone</div><div class="five-author">Kristin Hannah</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Let&#x27;s Make a Scene</div><div class="five-author">Laura Wood</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Under Your Spell</div><div class="five-author">Laura Wood</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Reckless</div><div class="five-author">Lauren Roberts</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Coming Home: A Roadmap from Fearful to Fully Alive</div><div class="five-author">Layla Palmer</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Caught Up</div><div class="five-author">Liz Tomforde</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">In Her Own League</div><div class="five-author">Liz Tomforde</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Play Along</div><div class="five-author">Liz Tomforde</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Right Move</div><div class="five-author">Liz Tomforde</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">By a Thread</div><div class="five-author">Lucy Score</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Mr. Fixer Upper</div><div class="five-author">Lucy Score</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Riley Thorn and the Dead Guy Next Door</div><div class="five-author">Lucy Score</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Story of My Life</div><div class="five-author">Lucy Score</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Body in the Backyard</div><div class="five-author">Lucy Score</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Things We Never Got Over</div><div class="five-author">Lucy Score</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Accidentally Amy</div><div class="five-author">Lynn Painter</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Better Than the Movies</div><div class="five-author">Lynn Painter</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Betting on You</div><div class="five-author">Lynn Painter</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Fake Skating</div><div class="five-author">Lynn Painter</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Maid for Each Other</div><div class="five-author">Lynn Painter</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Mr. Wrong Number</div><div class="five-author">Lynn Painter</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Wish Switch</div><div class="five-author">Lynn Painter</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">How to Get Revenge on a Cheating Ex</div><div class="five-author">Maggie Dallen</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Gleam</div><div class="five-author">Raven Kennedy</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Glint</div><div class="five-author">Raven Kennedy</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Glow</div><div class="five-author">Raven Kennedy</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Fourth Wing</div><div class="five-author">Rebecca Yarros</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Iron Flame</div><div class="five-author">Rebecca Yarros</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Onyx Storm</div><div class="five-author">Rebecca Yarros</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Battle of the Labyrinth</div><div class="five-author">Rick Riordan</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Last Olympian</div><div class="five-author">Rick Riordan</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Lightning Thief</div><div class="five-author">Rick Riordan</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Titan’s Curse</div><div class="five-author">Rick Riordan</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Preparing Your Daughter For Womanhood: A Guide For Moms</div><div class="five-author">Robin Jones Gunn</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Very Secret Society of Irregular Witches</div><div class="five-author">Sangu Mandanna</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Beg, Borrow, or Steal</div><div class="five-author">Sarah Adams</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">In Your Dreams</div><div class="five-author">Sarah Adams</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Practice Makes Perfect</div><div class="five-author">Sarah Adams</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Cheat Sheet</div><div class="five-author">Sarah Adams</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Enemy</div><div class="five-author">Sarah Adams</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Match</div><div class="five-author">Sarah Adams</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Spellshop</div><div class="five-author">Sarah Beth Durst</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Crown of Midnight</div><div class="five-author">Sarah J. Maas</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Heir of Fire</div><div class="five-author">Sarah J. Maas</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Queen of Shadows</div><div class="five-author">Sarah J. Maas</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Assassin&#x27;s Blade</div><div class="five-author">Sarah J. Maas</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Throne of Glass</div><div class="five-author">Sarah J. Maas</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">The Ballad of Never After</div><div class="five-author">Stephanie Garber</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Believe Me</div><div class="five-author">Tahereh Mafi</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Ignite Me</div><div class="five-author">Tahereh Mafi</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Reveal Me</div><div class="five-author">Tahereh Mafi</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Left of Forever</div><div class="five-author">Tarah Dewitt</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Savor It</div><div class="five-author">Tarah Dewitt</div></div></div>
+    <div class="fivelist-item"><div class="five-star">★</div><div class="five-info"><div class="five-title">Any Trope but You</div><div class="five-author">Victoria Lavine</div></div></div>
+  </div>
+  <div class="section-title">To Be Read <span class="pill">439</span></div>
+  <div class="tbr-note">Ranked by how much Mandy tends to love each author — the average star rating she's given that author's books she's already read. Authors she hasn't rated yet are marked <strong>new</strong> and listed last.</div>
+  <div class="tbr-card">
+    <div class="tbr-row"><div class="tbr-rank">1</div><div class="tbr-info"><div class="tbr-title">And Now, Back to You(Heartstrings, #2)</div><div class="tbr-author">B.K. Borison</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">2</div><div class="tbr-info"><div class="tbr-title">Grim Tidings (Ghosted, #2)</div><div class="tbr-author">B.K. Borison</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">3</div><div class="tbr-info"><div class="tbr-title">In the Likely Event</div><div class="tbr-author">Rebecca Yarros</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">4</div><div class="tbr-info"><div class="tbr-title">Lovelight Farms (Lovelight, #1)</div><div class="tbr-author">B.K. Borison</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">5</div><div class="tbr-info"><div class="tbr-title">The Things We Leave Unfinished</div><div class="tbr-author">Rebecca Yarros</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">6</div><div class="tbr-info"><div class="tbr-title">Variation</div><div class="tbr-author">Rebecca Yarros</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">7</div><div class="tbr-info"><div class="tbr-title">Funny Feelings</div><div class="tbr-author">Tarah Dewitt</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">8</div><div class="tbr-info"><div class="tbr-title">Lost and Found (Spunes, OR, #3)</div><div class="tbr-author">Tarah Dewitt</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">9</div><div class="tbr-info"><div class="tbr-title">A Fine Line (Wells Family, #5)</div><div class="tbr-author">Juliana Smith</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">10</div><div class="tbr-info"><div class="tbr-title">A Study in Sparkling (Love Notes, #2)</div><div class="tbr-author">Jodi McAlister</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">11</div><div class="tbr-info"><div class="tbr-title">A Witch&#x27;s Guide to Magical Innkeeping</div><div class="tbr-author">Sangu Mandanna</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">12</div><div class="tbr-info"><div class="tbr-title">Baggage Claim (Aspen Peaks #1)</div><div class="tbr-author">Juliana Smith</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">13</div><div class="tbr-info"><div class="tbr-title">Hard Feelings</div><div class="tbr-author">Jennifer Millikin</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">14</div><div class="tbr-info"><div class="tbr-title">I Can Fix That</div><div class="tbr-author">Juliana Smith</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">15</div><div class="tbr-info"><div class="tbr-title">Tea with Elephants (Suitcase Sisters #1)</div><div class="tbr-author">Robin Jones Gunn</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">16</div><div class="tbr-info"><div class="tbr-title">The Break-Up Pact</div><div class="tbr-author">Emma Lord</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">17</div><div class="tbr-info"><div class="tbr-title">The Bride Test (The Kiss Quotient, #2)</div><div class="tbr-author">Helen Hoang</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">18</div><div class="tbr-info"><div class="tbr-title">The Comeback Summer</div><div class="tbr-author">Ali Brady</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">19</div><div class="tbr-info"><div class="tbr-title">The Fiancé Dilemma (Green Oak, #2)</div><div class="tbr-author">Elena Armas</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">20</div><div class="tbr-info"><div class="tbr-title">The Heart Principle (The Kiss Quotient, #3)</div><div class="tbr-author">Helen Hoang</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">21</div><div class="tbr-info"><div class="tbr-title">The Long Game (Green Oak, #1)</div><div class="tbr-author">Elena Armas</div></div><div class="tbr-score"><span class="tbr-avg">5.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">22</div><div class="tbr-info"><div class="tbr-title">Cardinal Rule (Wilder Woods, #1)</div><div class="tbr-author">Liz Tomforde</div></div><div class="tbr-score"><span class="tbr-avg">4.67 ★</span><div class="tbr-avg-lbl">6 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">23</div><div class="tbr-info"><div class="tbr-title">The Enemy (It Happened in Charleston, #2)</div><div class="tbr-author">Sarah Adams</div></div><div class="tbr-score"><span class="tbr-avg">4.56 ★</span><div class="tbr-avg-lbl">9 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">24</div><div class="tbr-info"><div class="tbr-title">Fake Skating</div><div class="tbr-author">Lynn Painter</div></div><div class="tbr-score"><span class="tbr-avg">4.54 ★</span><div class="tbr-avg-lbl">13 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">25</div><div class="tbr-info"><div class="tbr-title">Maid For Each Other</div><div class="tbr-author">Lynn Painter</div></div><div class="tbr-score"><span class="tbr-avg">4.54 ★</span><div class="tbr-avg-lbl">13 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">26</div><div class="tbr-info"><div class="tbr-title">Josh and Hazel&#x27;s Guide to Not Dating</div><div class="tbr-author">Christina Lauren</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">6 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">27</div><div class="tbr-info"><div class="tbr-title">Love and Other Words</div><div class="tbr-author">Christina Lauren</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">6 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">28</div><div class="tbr-info"><div class="tbr-title">Roomies</div><div class="tbr-author">Christina Lauren</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">6 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">29</div><div class="tbr-info"><div class="tbr-title">Tangled Up in You (Meant to Be, #4)</div><div class="tbr-author">Christina Lauren</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">6 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">30</div><div class="tbr-info"><div class="tbr-title">The Romance Revival</div><div class="tbr-author">Christina Lauren</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">6 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">31</div><div class="tbr-info"><div class="tbr-title">The True Love Experiment</div><div class="tbr-author">Christina Lauren</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">6 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">32</div><div class="tbr-info"><div class="tbr-title">The Love Haters</div><div class="tbr-author">Katherine Center</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">33</div><div class="tbr-info"><div class="tbr-title">The Shippers</div><div class="tbr-author">Katherine Center</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">34</div><div class="tbr-info"><div class="tbr-title">Things You Save in a Fire</div><div class="tbr-author">Katherine Center</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">35</div><div class="tbr-info"><div class="tbr-title">What You Wish For</div><div class="tbr-author">Katherine Center</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">36</div><div class="tbr-info"><div class="tbr-title">Comfort &amp; Joy</div><div class="tbr-author">Kristin Hannah</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">37</div><div class="tbr-info"><div class="tbr-title">Daughter of No Worlds (The War of Lost Hearts, #1)</div><div class="tbr-author">Carissa Broadbent</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">38</div><div class="tbr-info"><div class="tbr-title">The Four Winds</div><div class="tbr-author">Kristin Hannah</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">39</div><div class="tbr-info"><div class="tbr-title">The Nightingale</div><div class="tbr-author">Kristin Hannah</div></div><div class="tbr-score"><span class="tbr-avg">4.50 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">40</div><div class="tbr-info"><div class="tbr-title">Maggie Moves On</div><div class="tbr-author">Lucy Score</div></div><div class="tbr-score"><span class="tbr-avg">4.33 ★</span><div class="tbr-avg-lbl">12 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">41</div><div class="tbr-info"><div class="tbr-title">Mistakes Were Made (Story Lake, #2)</div><div class="tbr-author">Lucy Score</div></div><div class="tbr-score"><span class="tbr-avg">4.33 ★</span><div class="tbr-avg-lbl">12 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">42</div><div class="tbr-info"><div class="tbr-title">The Graham Effect (Campus Diaries, #1)</div><div class="tbr-author">Elle Kennedy</div></div><div class="tbr-score"><span class="tbr-avg">4.33 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">43</div><div class="tbr-info"><div class="tbr-title">This Woven Kingdom (This Woven Kingdom, #1)</div><div class="tbr-author">Tahereh Mafi</div></div><div class="tbr-score"><span class="tbr-avg">4.22 ★</span><div class="tbr-avg-lbl">9 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">44</div><div class="tbr-info"><div class="tbr-title">Watch Me (Shatter Me: The New Republic, #1)</div><div class="tbr-author">Tahereh Mafi</div></div><div class="tbr-score"><span class="tbr-avg">4.22 ★</span><div class="tbr-avg-lbl">9 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">45</div><div class="tbr-info"><div class="tbr-title">Problematic Summer Romance (Not in Love, #2)</div><div class="tbr-author">Ali Hazelwood</div></div><div class="tbr-score"><span class="tbr-avg">4.13 ★</span><div class="tbr-avg-lbl">15 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">46</div><div class="tbr-info"><div class="tbr-title">Lucky Girl Summer</div><div class="tbr-author">Morgan Elizabeth</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">47</div><div class="tbr-info"><div class="tbr-title">Never Been Worse(Evergreen Park, #3)</div><div class="tbr-author">Morgan Elizabeth</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">48</div><div class="tbr-info"><div class="tbr-title">Passenger Princess(Evergreen Park, #1)</div><div class="tbr-author">Morgan Elizabeth</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">49</div><div class="tbr-info"><div class="tbr-title">The Fall of Bradley Reed(Seasons of Revenge, #3)</div><div class="tbr-author">Morgan Elizabeth</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">50</div><div class="tbr-info"><div class="tbr-title">Behind the Camera (Love through a Lens, #2)</div><div class="tbr-author">Chelsea Curto</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">51</div><div class="tbr-info"><div class="tbr-title">Caraval (Caraval, #1)</div><div class="tbr-author">Stephanie Garber</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">52</div><div class="tbr-info"><div class="tbr-title">Caught on Camera (Love Through a Lens, #1)</div><div class="tbr-author">Chelsea Curto</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">53</div><div class="tbr-info"><div class="tbr-title">Great Big Beautiful Life</div><div class="tbr-author">Emily Henry</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">54</div><div class="tbr-info"><div class="tbr-title">Hat Trick (D.C. Stars, #4)</div><div class="tbr-author">Chelsea Curto</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">55</div><div class="tbr-info"><div class="tbr-title">In Stormy Weather</div><div class="tbr-author">Chelsea Curto</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">56</div><div class="tbr-info"><div class="tbr-title">Off Camera (Love Through a Lens, #3)</div><div class="tbr-author">Chelsea Curto</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">57</div><div class="tbr-info"><div class="tbr-title">Sin Bin (D.C. Stars, #5)</div><div class="tbr-author">Chelsea Curto</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">58</div><div class="tbr-info"><div class="tbr-title">Not Another Love Song</div><div class="tbr-author">Julie Soto</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">59</div><div class="tbr-info"><div class="tbr-title">28 Summers</div><div class="tbr-author">Elin Hilderbrand</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">60</div><div class="tbr-info"><div class="tbr-title">Bourbon &amp; Secrets (The Bourbon Boys, #2)</div><div class="tbr-author">Victoria Wilder</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">61</div><div class="tbr-info"><div class="tbr-title">Bright Lights, Big Christmas</div><div class="tbr-author">Mary Kay Andrews</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">62</div><div class="tbr-info"><div class="tbr-title">Don&#x27;t Be In Love</div><div class="tbr-author">Liana Cincotti</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">63</div><div class="tbr-info"><div class="tbr-title">Don&#x27;t Hex and Drive (Stay a Spell, #2)</div><div class="tbr-author">Juliette Cross</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">64</div><div class="tbr-info"><div class="tbr-title">Heathen &amp; Honeysuckle</div><div class="tbr-author">Sarah A. Bailey</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">65</div><div class="tbr-info"><div class="tbr-title">How to Sell a Romance</div><div class="tbr-author">Alexa Martin</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">66</div><div class="tbr-info"><div class="tbr-title">Love, Mom</div><div class="tbr-author">Iliana Xander</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">67</div><div class="tbr-info"><div class="tbr-title">Project Hail Mary</div><div class="tbr-author">Andy Weir</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">68</div><div class="tbr-info"><div class="tbr-title">Swept Away</div><div class="tbr-author">Beth O&#x27;Leary</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">69</div><div class="tbr-info"><div class="tbr-title">The Academy (The Academy #1)</div><div class="tbr-author">Elin Hilderbrand</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">70</div><div class="tbr-info"><div class="tbr-title">The Academy (The Academy Series #1)</div><div class="tbr-author">Elin Hilderbrand</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">71</div><div class="tbr-info"><div class="tbr-title">The Hating Game</div><div class="tbr-author">Sally Thorne</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">72</div><div class="tbr-info"><div class="tbr-title">The Housemaid&#x27;s Secret (The Housemaid, #2)</div><div class="tbr-author">Freida McFadden</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">73</div><div class="tbr-info"><div class="tbr-title">The No-Show</div><div class="tbr-author">Beth O&#x27;Leary</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">74</div><div class="tbr-info"><div class="tbr-title">The Romance Rivalry</div><div class="tbr-author">Susan Lee</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">75</div><div class="tbr-info"><div class="tbr-title">The Teacher</div><div class="tbr-author">Freida McFadden</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">76</div><div class="tbr-info"><div class="tbr-title">The Tenant</div><div class="tbr-author">Freida McFadden</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">77</div><div class="tbr-info"><div class="tbr-title">Trial of the Sun Queen(Artefacts of Ouranos, #1)</div><div class="tbr-author">Nisha J. Tuli</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">78</div><div class="tbr-info"><div class="tbr-title">Ward D</div><div class="tbr-author">Freida McFadden</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">79</div><div class="tbr-info"><div class="tbr-title">Winter Street (Winter, #1)</div><div class="tbr-author">Elin Hilderbrand</div></div><div class="tbr-score"><span class="tbr-avg">4.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">80</div><div class="tbr-info"><div class="tbr-title">Dating After the End of the World</div><div class="tbr-author">Jeneva Rose</div></div><div class="tbr-score"><span class="tbr-avg">3.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">81</div><div class="tbr-info"><div class="tbr-title">Poisoned Ivy</div><div class="tbr-author">Ava Rani</div></div><div class="tbr-score"><span class="tbr-avg">3.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">82</div><div class="tbr-info"><div class="tbr-title">That Kind of Guy (Queen&#x27;s Cove, #1)</div><div class="tbr-author">Stephanie Archer</div></div><div class="tbr-score"><span class="tbr-avg">3.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">83</div><div class="tbr-info"><div class="tbr-title">The Girl I Was</div><div class="tbr-author">Jeneva Rose</div></div><div class="tbr-score"><span class="tbr-avg">3.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">84</div><div class="tbr-info"><div class="tbr-title">The Perfect Divorce</div><div class="tbr-author">Jeneva Rose</div></div><div class="tbr-score"><span class="tbr-avg">3.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">85</div><div class="tbr-info"><div class="tbr-title">The Perfect Divorce (Perfect, #2)</div><div class="tbr-author">Jeneva Rose</div></div><div class="tbr-score"><span class="tbr-avg">3.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">86</div><div class="tbr-info"><div class="tbr-title">The Wrong Mr. Right(Queen&#x27;s Cove, #2)</div><div class="tbr-author">Stephanie Archer</div></div><div class="tbr-score"><span class="tbr-avg">3.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">87</div><div class="tbr-info"><div class="tbr-title">You Shouldn&#x27;t Have Come Here</div><div class="tbr-author">Jeneva Rose</div></div><div class="tbr-score"><span class="tbr-avg">3.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">88</div><div class="tbr-info"><div class="tbr-title">The Soul Mate</div><div class="tbr-author">Lana Ferguson</div></div><div class="tbr-score"><span class="tbr-avg">3.50 ★</span><div class="tbr-avg-lbl">6 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">89</div><div class="tbr-info"><div class="tbr-title">No Matter What</div><div class="tbr-author">Cara Bastone</div></div><div class="tbr-score"><span class="tbr-avg">3.50 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">90</div><div class="tbr-info"><div class="tbr-title">Promise Me Sunshine</div><div class="tbr-author">Cara Bastone</div></div><div class="tbr-score"><span class="tbr-avg">3.50 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">91</div><div class="tbr-info"><div class="tbr-title">Strictly Extracurricular(Lessons in Love #3)</div><div class="tbr-author">Ana Kirk Shaw</div></div><div class="tbr-score"><span class="tbr-avg">3.50 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">92</div><div class="tbr-info"><div class="tbr-title">Bad Boy Era (Mountain Men Matchmaker, #4)</div><div class="tbr-author">Amy Daws</div></div><div class="tbr-score"><span class="tbr-avg">3.25 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">93</div><div class="tbr-info"><div class="tbr-title">Bad Boy Era: A Best Friend’s Twin Brother Small Town Sports Romance (Mountain Men Matchmaker, 4)</div><div class="tbr-author">Amy Daws</div></div><div class="tbr-score"><span class="tbr-avg">3.25 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">94</div><div class="tbr-info"><div class="tbr-title">It Seemed Like a Good Idea(Darling Springs, #1)</div><div class="tbr-author">Lauren Blakely</div></div><div class="tbr-score"><span class="tbr-avg">3.25 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">95</div><div class="tbr-info"><div class="tbr-title">He&#x27;s Not My Type (The Vancouver Agitators, #4)</div><div class="tbr-author">Meghan Quinn</div></div><div class="tbr-score"><span class="tbr-avg">3.22 ★</span><div class="tbr-avg-lbl">9 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">96</div><div class="tbr-info"><div class="tbr-title">Just for the Plot (Bay Area Players, #2)</div><div class="tbr-author">Meghan Quinn</div></div><div class="tbr-score"><span class="tbr-avg">3.22 ★</span><div class="tbr-avg-lbl">9 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">97</div><div class="tbr-info"><div class="tbr-title">Kiss and Don&#x27;t Tell (The Vancouver Agitators, #1)</div><div class="tbr-author">Meghan Quinn</div></div><div class="tbr-score"><span class="tbr-avg">3.22 ★</span><div class="tbr-avg-lbl">9 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">98</div><div class="tbr-info"><div class="tbr-title">So Not Meant To Be (Cane Brothers, #2)</div><div class="tbr-author">Meghan Quinn</div></div><div class="tbr-score"><span class="tbr-avg">3.22 ★</span><div class="tbr-avg-lbl">9 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">99</div><div class="tbr-info"><div class="tbr-title">The Way I Hate Him (Almond Bay, #1)</div><div class="tbr-author">Meghan Quinn</div></div><div class="tbr-score"><span class="tbr-avg">3.22 ★</span><div class="tbr-avg-lbl">9 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">100</div><div class="tbr-info"><div class="tbr-title">All the Missing Pieces</div><div class="tbr-author">Catherine Cowles</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">101</div><div class="tbr-info"><div class="tbr-title">My Dark Desire (Dark Prince Road, #2)</div><div class="tbr-author">L.J. Shen</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">102</div><div class="tbr-info"><div class="tbr-title">The Seven Husbands of Evelyn Hugo</div><div class="tbr-author">Taylor Jenkins Reid</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">2 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">103</div><div class="tbr-info"><div class="tbr-title">By the Book (Meant to Be, #2)</div><div class="tbr-author">Jasmine Guillory</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">104</div><div class="tbr-info"><div class="tbr-title">Dealing with a Desperate Demon (The Sanctuary for Supernatural Creatures, #2)</div><div class="tbr-author">Charlotte Stein</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">105</div><div class="tbr-info"><div class="tbr-title">Friends with Benefits</div><div class="tbr-author">Marisa Kanter</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">106</div><div class="tbr-info"><div class="tbr-title">Holding the Reins (Silver Pines Ranch, #1)</div><div class="tbr-author">Paisley Hope</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">107</div><div class="tbr-info"><div class="tbr-title">If the Shoe Fits (Meant to Be, #1)</div><div class="tbr-author">Julie Murphy</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">108</div><div class="tbr-info"><div class="tbr-title">Just the Nicest Couple</div><div class="tbr-author">Mary Kubica</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">109</div><div class="tbr-info"><div class="tbr-title">Local Woman Missing</div><div class="tbr-author">Mary Kubica</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">110</div><div class="tbr-info"><div class="tbr-title">Love Overboard</div><div class="tbr-author">Kandi Steiner</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">111</div><div class="tbr-info"><div class="tbr-title">Rock Paper Scissors</div><div class="tbr-author">Alice Feeney</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">112</div><div class="tbr-info"><div class="tbr-title">Summer Romance</div><div class="tbr-author">Annabel Monaghan</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">113</div><div class="tbr-info"><div class="tbr-title">The Good Girl</div><div class="tbr-author">Mary Kubica</div></div><div class="tbr-score"><span class="tbr-avg">3.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">114</div><div class="tbr-info"><div class="tbr-title">Catching Feelings (Orleans University, #2)</div><div class="tbr-author">Maren Moore</div></div><div class="tbr-score"><span class="tbr-avg">2.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">115</div><div class="tbr-info"><div class="tbr-title">Next of Kin (Next, #1)</div><div class="tbr-author">Hannah Bonam-Young</div></div><div class="tbr-score"><span class="tbr-avg">2.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">116</div><div class="tbr-info"><div class="tbr-title">Next to You (Next, #2)</div><div class="tbr-author">Hannah Bonam-Young</div></div><div class="tbr-score"><span class="tbr-avg">2.75 ★</span><div class="tbr-avg-lbl">4 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">117</div><div class="tbr-info"><div class="tbr-title">Checked Into Love(Evergreen Cove #2)</div><div class="tbr-author">Brooklyn Hart</div></div><div class="tbr-score"><span class="tbr-avg">2.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">118</div><div class="tbr-info"><div class="tbr-title">Lassoed Love (Silver Saddle Ranch, #2)</div><div class="tbr-author">Ann Einerson</div></div><div class="tbr-score"><span class="tbr-avg">2.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">119</div><div class="tbr-info"><div class="tbr-title">One Perfect Couple</div><div class="tbr-author">Ruth Ware</div></div><div class="tbr-score"><span class="tbr-avg">2.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">120</div><div class="tbr-info"><div class="tbr-title">Rites of the Starling (Shield of Sparrows, #2)</div><div class="tbr-author">Devney Perry</div></div><div class="tbr-score"><span class="tbr-avg">2.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">121</div><div class="tbr-info"><div class="tbr-title">Shield of Sparrows (Shield of Sparrows, #1)</div><div class="tbr-author">Devney Perry</div></div><div class="tbr-score"><span class="tbr-avg">2.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">122</div><div class="tbr-info"><div class="tbr-title">The Woman in Cabin 10 (Lo Blacklock #1)</div><div class="tbr-author">Ruth Ware</div></div><div class="tbr-score"><span class="tbr-avg">2.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">123</div><div class="tbr-info"><div class="tbr-title">The Woman in Cabin 10 (Lo Blacklock, #1)</div><div class="tbr-author">Ruth Ware</div></div><div class="tbr-score"><span class="tbr-avg">2.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">124</div><div class="tbr-info"><div class="tbr-title">All Your Perfects (Hopeless, #3)</div><div class="tbr-author">Colleen Hoover</div></div><div class="tbr-score"><span class="tbr-avg">1.67 ★</span><div class="tbr-avg-lbl">3 read</div></div></div>
+    <div class="tbr-row"><div class="tbr-rank">125</div><div class="tbr-info"><div class="tbr-title">All Rhodes Lead Here</div><div class="tbr-author">Mariana Zapata</div></div><div class="tbr-score"><span class="tbr-avg">1.00 ★</span><div class="tbr-avg-lbl">1 read</div></div></div>
+  </div>
+  <div class="tbr-group-label">New Authors · Not Yet Rated <span class="pill">314</span></div>
+  <div class="tbr-card">
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Island</div><div class="tbr-author">Adrian McKinty</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">And Then There Were None</div><div class="tbr-author">Agatha Christie</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Lightlark (Lightlark, #1)</div><div class="tbr-author">Alex Aster</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Starside</div><div class="tbr-author">Alex Aster</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Summer in the City</div><div class="tbr-author">Alex Aster</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Fury</div><div class="tbr-author">Alex Michaelides</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Silent Patient</div><div class="tbr-author">Alex Michaelides</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">My Life with the Walter Boys(My Life with the Walter Boys #1)</div><div class="tbr-author">Ali Novak</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Unlikely Story</div><div class="tbr-author">Ali Rosen</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">How to Find Love in the Cereal Aisle: A Novel</div><div class="tbr-author">Alissa DeRogatis</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Everlasting</div><div class="tbr-author">Alix E. Harrow</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Theo of Golden</div><div class="tbr-author">Allen Levi</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Always the Boyfriend</div><div class="tbr-author">Allison Speka</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Throne of Broken Gods(Gods &amp; Monsters, #2)</div><div class="tbr-author">Amber V. Nicole</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Alive at Night (Wildflower, #1)</div><div class="tbr-author">Amelie Rhys</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Exes and O&#x27;s (The Influencer, #2)</div><div class="tbr-author">Amy Lea</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Set on You (The Influencer, #1)</div><div class="tbr-author">Amy Lea</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Catch (The Influencer, #3)</div><div class="tbr-author">Amy Lea</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">So It Grows</div><div class="tbr-author">Andie Burke</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Balanced and Barefoot: How Unrestricted Outdoor Play Makes for Strong, Confident, and Capable Children</div><div class="tbr-author">Angela J. Hanscom</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">I Hope This Doesn&#x27;t Find You</div><div class="tbr-author">Ann Liang</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">This Time It&#x27;s Real</div><div class="tbr-author">Ann Liang</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Worst in Show</div><div class="tbr-author">Anna E. Collins</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">It Could Be Us</div><div class="tbr-author">Anna Lynn</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">One Night Is Never Enough(The Merrick Brothers Book 1)</div><div class="tbr-author">Anne Mallory</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Lucky Charm</div><div class="tbr-author">Anne-Marie Meyer</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">All the Light We Cannot See</div><div class="tbr-author">Anthony Doerr</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Not the Witch You Wed(Supernatural Singles, #1)</div><div class="tbr-author">April Asher</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">10 Blind Dates</div><div class="tbr-author">Ashley Elston</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Anatomy of an Alibi</div><div class="tbr-author">Ashley Elston</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">First Lie Wins</div><div class="tbr-author">Ashley Elston</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">All Good People Here</div><div class="tbr-author">Ashley Flowers</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Missing Half</div><div class="tbr-author">Ashley Flowers</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Novel Love Story</div><div class="tbr-author">Ashley Poston</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Dead Romantics</div><div class="tbr-author">Ashley Poston</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Seven Year Slip</div><div class="tbr-author">Ashley Poston</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Checked and Balanced (The Lady and The Stag #1)</div><div class="tbr-author">Aurora Steinhart</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Nightshade (Sorrowsong University, #1)</div><div class="tbr-author">Autumn Woods</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Tame the Heart (Runaway Ranch, #1)</div><div class="tbr-author">Ava Hunter</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">How to Fake It in Hollywood</div><div class="tbr-author">Ava Wilder</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Some Kind of Famous</div><div class="tbr-author">Ava Wilder</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Dear Henry, Love Edith</div><div class="tbr-author">Becca Kinzer</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">First Love, Second Draft</div><div class="tbr-author">Becca Kinzer</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Sweet Temptation (Love &amp; Legacy #1)</div><div class="tbr-author">Bella Matthews</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Everyone in This Bank Is a Thief (Ernest Cunningham, #4)</div><div class="tbr-author">Benjamin Stevenson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Dark Matter</div><div class="tbr-author">Blake Crouch</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Dark Matter: A Novel</div><div class="tbr-author">Blake Crouch</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Lessons in Chemistry</div><div class="tbr-author">Bonnie Garmus</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Duskbound (Esprithean Trilogy, #2)</div><div class="tbr-author">Bree Grenwich</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Riftborne (Esprithean Trilogy, #1)</div><div class="tbr-author">Bree Grenwich</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Ascended (Aesymarean Duet, #1)</div><div class="tbr-author">Bree Grenwich</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Possessive Heart (Starlight Cove, #5)</div><div class="tbr-author">Brighton Walsh</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Woman in Me</div><div class="tbr-author">Britney Spears</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Problem with Dating(Problems, #1)</div><div class="tbr-author">Brittainy C. Cherry</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">On Wings of Ash and Dust(The Faylan Trials, #1)</div><div class="tbr-author">Brittany Wang</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">To Cage a Wild Bird (Divided Fates #1)</div><div class="tbr-author">Brooke Fast</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Tourist Season (The Seasons of Carnage Trilogy, #1)</div><div class="tbr-author">Brynne Weaver</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">May the Best Man Win(Wishing Springs Romances #2)</div><div class="tbr-author">C.L. Rain</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Avalon Tower (Fey Academy for Spies, #1)</div><div class="tbr-author">C.N. Crawford</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">First Flight, Final Fall</div><div class="tbr-author">C.W. Farnsworth</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Every Summer After</div><div class="tbr-author">Carley Fortune</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Meet Me at the Lake</div><div class="tbr-author">Carley Fortune</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">This Summer Will Be Different</div><div class="tbr-author">Carley Fortune</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Can&#x27;t Look Away</div><div class="tbr-author">Carola Lovering</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Every Time I Go on Vacation, Someone Dies (The Vacation Mysteries, #1)</div><div class="tbr-author">Catherine Mack</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">How to Write a Love Story</div><div class="tbr-author">Catherine Walsh</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">An Infinite Love Story</div><div class="tbr-author">Chanel Cleeton</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Mistletoe Motive</div><div class="tbr-author">Chloe Liese</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Daughter of Fair Verona(Daughter of Montague, #1)</div><div class="tbr-author">Christina Dodd</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Most Fun We Ever Had</div><div class="tbr-author">Claire Lombardo</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Never Over</div><div class="tbr-author">Clare Gilmore</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Perfect Fit</div><div class="tbr-author">Clare Gilmore</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">I Let You Go</div><div class="tbr-author">Clare Mackintosh</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Jane and Dan at the End of the World</div><div class="tbr-author">Colleen Oakley</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Brighter than Before</div><div class="tbr-author">Courtney Walsh</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Winning the War in Your Mind: Change Your Thinking, Change Your Life</div><div class="tbr-author">Craig Groeschel</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Lost Love Found (Love in LA #1)</div><div class="tbr-author">Cristina Santos</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">How to Find a Guy in Five Weddings</div><div class="tbr-author">Cynthia Timoti</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Silver Elite (Silver Elite, #1)</div><div class="tbr-author">Dani Francis</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Just Our Luck</div><div class="tbr-author">Denise Williams</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">How Sweet It Is (Matthews Brothers, #1)</div><div class="tbr-author">Dylan Newton</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Let&#x27;s Pretend (Taking Risks, #1)</div><div class="tbr-author">E. Salvador</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Please Don&#x27;t Go (The Midnight Strike, #1)</div><div class="tbr-author">E. Salvador</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Georgia: Britain&#x27;s Story, Part 1</div><div class="tbr-author">E.L. Stevens</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">All They Need to Know (Gold Creek, #1)</div><div class="tbr-author">Eileen Goudge</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Game of Love and Betrayal(The Choosing Chronicles, #1)</div><div class="tbr-author">Elayna R. Gallea</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Arcana Academy (Arcana Academy, #1)</div><div class="tbr-author">Elise Kova</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Rivals to Lovers</div><div class="tbr-author">Elise Wayland</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Magic and Mischief at the Wayside Hotel</div><div class="tbr-author">Elizabeth Everett</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Bonded by Thorns (Beasts of the Briar, #1)</div><div class="tbr-author">Elizabeth Helen</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Deal with the Devil (The Grumpy Devils, #1)</div><div class="tbr-author">Elizabeth O&#x27;Roark</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Finlay Donovan Is Killing It(Finlay Donovan, #1)</div><div class="tbr-author">Elle Cosimano</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Heartbreak Hotel</div><div class="tbr-author">Ellen O&#x27;Clover</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Summer Place</div><div class="tbr-author">Ellie Greene</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Scotch on the Rocks (The Macabe Brothers, #2)</div><div class="tbr-author">Elliot Fletcher</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Whisky Business (The Macabe Brothers, #1)</div><div class="tbr-author">Elliot Fletcher</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Tokyo Ever After (Tokyo Ever After, #1)</div><div class="tbr-author">Emiko Jean</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Violet Thistlewaite Is Not a Villain Anymore</div><div class="tbr-author">Emily Krempholtz</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Beneath the Stars (Sugarlake, #1)</div><div class="tbr-author">Emily McIntire</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Book Tour</div><div class="tbr-author">Emily Ohanjanians</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Groom of One&#x27;s Own(Appies, #3)</div><div class="tbr-author">Emma St. Clair</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Thorne at My Side</div><div class="tbr-author">Erin Marie Bassett</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Ex Hex (The Ex Hex, #1)</div><div class="tbr-author">Erin Sterling</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Kiss Countdown</div><div class="tbr-author">Etta Easton</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Ending Writes Itself</div><div class="tbr-author">Evelyn Clarke</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Just My Type</div><div class="tbr-author">Falon Ballard</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Right on Cue</div><div class="tbr-author">Falon Ballard</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Anxious People</div><div class="tbr-author">Fredrik Backman</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">My Friends</div><div class="tbr-author">Fredrik Backman</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Evidence of Us (The Study Room Series, #1)</div><div class="tbr-author">Genna Black</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Friendship Fling</div><div class="tbr-author">Georgia Stone</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Roommate Rule</div><div class="tbr-author">Georgia Stone</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Wrong Place Wrong Time</div><div class="tbr-author">Gillian McAllister</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Unbalanced Equation(Hot Mess Trilogy, #1)</div><div class="tbr-author">H.L. Macfarlane</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Bound to the Fae (Court of Cruel Fae, #1)</div><div class="tbr-author">Hailey Gonzales</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Mistakes We Never Made(Mistakes We Never Made, #1)</div><div class="tbr-author">Hannah Brown</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Catching Sparks (Cherry Peak, #2)</div><div class="tbr-author">Hannah Cowan</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Assistant to the Villain(Assistant to the Villain, #1)</div><div class="tbr-author">Hannah Nicole Maehrer</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Perfectly Imperfect</div><div class="tbr-author">Harper Sloan</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Wedding Dashers</div><div class="tbr-author">Heather McBreen</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">I Could Be Yours</div><div class="tbr-author">Helena Hunting</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Cruel Prince (The Folk of the Air, #1)</div><div class="tbr-author">Holly Black</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Wicked King (The Folk of the Air, #2)</div><div class="tbr-author">Holly Black</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Good Girl&#x27;s Guide to Murder</div><div class="tbr-author">Holly Jackson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Good Girl&#x27;s Guide to Murder (A Good Girl&#x27;s Guide to Murder, #1)</div><div class="tbr-author">Holly Jackson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">What Might Have Been</div><div class="tbr-author">Holly Miller</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Veiled Kingdom (The Veiled Kingdom, #1)</div><div class="tbr-author">Holly Renee</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Female Fantasy</div><div class="tbr-author">Iman Hariri-Kia</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The League of Gentlewomen Witches (Dangerous Damsels, #2)</div><div class="tbr-author">India Holton</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Secret Service of Tea and Treason (Dangerous Damsels, #3)</div><div class="tbr-author">India Holton</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Wisteria Society of Lady Scoundrels (Dangerous Damsels, #1)</div><div class="tbr-author">India Holton</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Dragons and Aces (Dragons and Aces, #1)</div><div class="tbr-author">J. G. Gates</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Vow in Vengeance(Immortal Desires, #1)</div><div class="tbr-author">Jaclyn Rodriguez</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Last Wish List</div><div class="tbr-author">Jacqueline Silvester</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Holy Hygge: Creating a Place for People to Gather and the Gospel to Grow</div><div class="tbr-author">Jamie Erickson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Fake It Till You Bake It (Sugar Blitz, #1)</div><div class="tbr-author">Jamie Wesley</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Appeal (The Appeal, #1)</div><div class="tbr-author">Janice Hallett</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Blood of Hercules (Villains of Lore, #1)</div><div class="tbr-author">Jasmine Mas</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Promised in Fire (Of Dragons and Fae, #1)</div><div class="tbr-author">Jasmine Walt</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Spellcaster (Weatherstone College, #1)</div><div class="tbr-author">Jaymin Eve</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Never Game (Colter Shaw, #1)</div><div class="tbr-author">Jeffery Deaver</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The King of Frost and Shadows (Fated to Darkness, #1)</div><div class="tbr-author">Jen L. Grey</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Summer Share</div><div class="tbr-author">Jenn McKinlay</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">From Blood and Ash (Blood and Ash, #1)</div><div class="tbr-author">Jennifer L. Armentrout</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Charmed Library</div><div class="tbr-author">Jennifer Moorman</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Summer Place</div><div class="tbr-author">Jennifer Weiner</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Manic Pixie Dream Earl (Earls Trip, #2)</div><div class="tbr-author">Jenny Holiday</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Once Upon a Boyband(Midnight Rush Romance, #1)</div><div class="tbr-author">Jenny Proctor</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Magnolia Parks (Magnolia Parks Universe, #1)</div><div class="tbr-author">Jessa Hastings</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Worth Fighting For (Meant to Be, #5)</div><div class="tbr-author">Jesse Q. Sutanto</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Ex Vows</div><div class="tbr-author">Jessica Joyce</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">You, with a View</div><div class="tbr-author">Jessica Joyce</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Ace of Betrayal (Hand of Revenge, #1)</div><div class="tbr-author">Jessica Jude</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Raiders of the Lost Heart(Raiders of the Lost Heart, #1)</div><div class="tbr-author">Jo Segura</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Lust Crusade (Raiders of the Lost Heart, #3)</div><div class="tbr-author">Jo Segura</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Small Great Things</div><div class="tbr-author">Jodi Picoult</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Ransom Canyon (Ransom Canyon, #1)</div><div class="tbr-author">Jodi Thomas</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Ruthless Elimination of Hurry: How to Stay Emotionally Healthy and Spiritually Alive in the Chaos of the Modern World</div><div class="tbr-author">John Mark Comer</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Anxious Generation: How the Great Rewiring of Childhood Caused an Epidemic of Mental Illness</div><div class="tbr-author">Jonathan Haidt</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Slow Burn Summer</div><div class="tbr-author">Josie Silver</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Simple Wild (Wild, #1)</div><div class="tbr-author">K.A. Tucker</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">How to Keep House While Drowning</div><div class="tbr-author">K.C. Davis</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Summer of Broken Rules</div><div class="tbr-author">K.L. Walther</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Beginner&#x27;s Luck (Chance of a Lifetime, #1)</div><div class="tbr-author">Kate Clayborn</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Luck of the Draw (Chance of a Lifetime, #2)</div><div class="tbr-author">Kate Clayborn</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Paris Match</div><div class="tbr-author">Kate Clayborn</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">You, Again</div><div class="tbr-author">Kate Goldbeck</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Dawn of Onyx (The Sacred Stones, #1)</div><div class="tbr-author">Kate Golden</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Half City (Harker Academy, #1)</div><div class="tbr-author">Kate Golden</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Briar Club</div><div class="tbr-author">Kate Quinn</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">One Last Summer</div><div class="tbr-author">Kate Spencer</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Just Some Stupid Love Story</div><div class="tbr-author">Katelyn Doyle</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">All at Once</div><div class="tbr-author">Katherina B.</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Dogtown (Dogtown, #1)</div><div class="tbr-author">Katherine Applegate</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Scavengers</div><div class="tbr-author">Kathleen Boland</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">You Between the Lines</div><div class="tbr-author">Katie Naymon</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Scenic Route (Beneath the Wild Sky, #1)</div><div class="tbr-author">Katie Ruggle</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">City of Gods and Monsters</div><div class="tbr-author">Kayla Edwards</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">City of Gods and Monsters(House of Devils, #1)</div><div class="tbr-author">Kayla Edwards</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Phantasma (Wicked Games, #1)</div><div class="tbr-author">Kaylie Smith</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Don&#x27;t Let Me Down: A Frenemies-to-Lovers Workplace Hockey Romance</div><div class="tbr-author">Kelsie Rae</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Don&#x27;t Let Me Fall (Don&#x27;t Let Me #1)</div><div class="tbr-author">Kelsie Rae</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Spirit of Wealth Preservation: Leverage Your Finite Life for the Infinite Good</div><div class="tbr-author">Ken Polk</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Kite Runner</div><div class="tbr-author">Khaled Hosseini</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Selection (The Selection, #1)</div><div class="tbr-author">Kiera Cass</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Memory Puller (The Memory Puller, #1)</div><div class="tbr-author">Kris K. Haines</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Addicted to You (Addicted, #1)</div><div class="tbr-author">Krista Ritchie</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Kiss the Sky (Calloway Sisters, #1)</div><div class="tbr-author">Krista Ritchie</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Heartless Hunter (The Crimson Moth, #1)</div><div class="tbr-author">Kristen Ciccarelli</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Rebel Witch (The Crimson Moth, #2)</div><div class="tbr-author">Kristen Ciccarelli</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">How to Solve Your Own Murder (Castle Knoll Files, #1)</div><div class="tbr-author">Kristen Perrin</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Fall into Place: A Novel</div><div class="tbr-author">Kristyn J. Miller</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Curse of Shadows and Thorns (The Broken Kingdoms, #1)</div><div class="tbr-author">L.J. Andrews</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Ever King</div><div class="tbr-author">L.J. Andrews</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Ever King (The Ever Seas, #1)</div><div class="tbr-author">L.J. Andrews</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Silversmith (The Selvaren, #1)</div><div class="tbr-author">L.J. Claren</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Strange the Dreamer (Strange the Dreamer, #1)</div><div class="tbr-author">Laini Taylor</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Many Lives of Mama Love: A Memoir of Lying, Stealing, Writing, and Healing</div><div class="tbr-author">Lara Love Hardin</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The First Time I Saw Him(Hannah Hall, #2)</div><div class="tbr-author">Laura Dave</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">One-Star Romance</div><div class="tbr-author">Laura Hankin</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Beverly</div><div class="tbr-author">Laura J. Robert</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">By Any Other Name</div><div class="tbr-author">Lauren Kate</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Red String Theory</div><div class="tbr-author">Lauren Kung Jessen</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Tropesick</div><div class="tbr-author">Lauren Okie</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Delirium (Delirium, #1)</div><div class="tbr-author">Lauren Oliver</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Wolf King (The Wolf King, #1)</div><div class="tbr-author">Lauren Palphreyman</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Cabin Mate (Under Kansas Skies, #4)</div><div class="tbr-author">Leah Brunner</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Six of Crows (Six of Crows, #1)</div><div class="tbr-author">Leigh Bardugo</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">This Book Made Me Think of You</div><div class="tbr-author">Libby Page</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Writers &amp; Lovers</div><div class="tbr-author">Lily King</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Sky Shielder (Fire and Fang #1)</div><div class="tbr-author">Lindsay Buroker</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Then She Was Gone</div><div class="tbr-author">Lisa Jewell</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Before We Were Yours</div><div class="tbr-author">Lisa Wingate</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Brightest Light of Sunshine (The Brightest Light, #1)</div><div class="tbr-author">Lisina Coney</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Last Mrs. Parrish (Mrs. Parrish, #1)</div><div class="tbr-author">Liv Constantine</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Four Weddings and a Puppy</div><div class="tbr-author">Lizzie Shane</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Lord of Scoundrels</div><div class="tbr-author">Loretta Chase</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Don&#x27;t Give the Enemy a Seat at Your Table: It&#x27;s Time to Win the Battle of Your Mind</div><div class="tbr-author">Louie Giglio</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Don&#x27;t Give the Enemy a Seat at Your Table: It&#x27;s Time to Win the Battle of Your Mind...</div><div class="tbr-author">Louie Giglio</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Best of Friends</div><div class="tbr-author">Lucinda Berry</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Bromance Book Club(Bromance Book Club, #1)</div><div class="tbr-author">Lyssa Kay Adams</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">In Between Darkness</div><div class="tbr-author">M.J. Castleton</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Zero Stars, Do Not Recommend</div><div class="tbr-author">M.J. Wassmer</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Austen Affair</div><div class="tbr-author">Madeline Bell</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Song of Achilles</div><div class="tbr-author">Madeline Miller</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Axiom (Axiom, #1)</div><div class="tbr-author">Madison Rose</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Fire Line (The Griffith Brothers, #3)</div><div class="tbr-author">Maggie C. Gates</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Love and Other Conspiracies</div><div class="tbr-author">Mallory Marlowe</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Empire of Flame and Thorns</div><div class="tbr-author">Marion Blackwood</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Empire of Flame and Thorns(Flame and Thorns, #1)</div><div class="tbr-author">Marion Blackwood</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Cinder (The Lunar Chronicles, #1)</div><div class="tbr-author">Marissa Meyer</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Book Thief</div><div class="tbr-author">Markus Zusak</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Half Moon</div><div class="tbr-author">Mary Beth Keane</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Midnight Library (The Midnight World, #1)</div><div class="tbr-author">Matt Haig</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Truly, Devious (Truly Devious, #1)</div><div class="tbr-author">Maureen Johnson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Throwback</div><div class="tbr-author">Maurene Goo</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Are You Mad at Me?</div><div class="tbr-author">Meg Josephson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Last House Guest</div><div class="tbr-author">Megan Miranda</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Wings of Life (Dragonbound Chronicles, #1)</div><div class="tbr-author">Meghan Le Fay</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Let Them Theory</div><div class="tbr-author">Mel Robbins</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Hart&#x27;s Landing</div><div class="tbr-author">Melanie Harlow</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">My Favorite Kidnapper (My Favorite, #1)</div><div class="tbr-author">Melanie Moreland</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Meet Me in the Margins</div><div class="tbr-author">Melissa Ferguson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Without a Clue</div><div class="tbr-author">Melissa Ferguson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">My Fault (Culpable, #1)</div><div class="tbr-author">Mercedes Ron</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">My Best Friend&#x27;s Honeymoon</div><div class="tbr-author">Meryl Wilsner</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Runebreaker</div><div class="tbr-author">Mila Finch</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Stillwater Girls</div><div class="tbr-author">Minka Kent</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Every Version of You</div><div class="tbr-author">Natalie Messier</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Deep In Love</div><div class="tbr-author">Nicole Cubba</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Curse of Ophelia (The Curse of Ophelia, #1)</div><div class="tbr-author">Nicole Platania</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Family Across the Street</div><div class="tbr-author">Nicole Trope</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Digging Dr Jones</div><div class="tbr-author">Olivia Jackson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Fear the Flames (Fear the Flames, #1)</div><div class="tbr-author">Olivia Rose Darling</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">My Dark Romeo (Dark Prince Road, #1)</div><div class="tbr-author">Parker S. Huntington</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Spark of the Everflame(Kindred&#x27;s Curse, #1)</div><div class="tbr-author">Penn Cole</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Unsteady (The Undone, #1)</div><div class="tbr-author">Peyton Corinne</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Red Rising (Red Rising Saga, #1)</div><div class="tbr-author">Pierce Brown</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Better Off Wed</div><div class="tbr-author">Portia MacIntosh</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">One Dark Window (The Shepherd King, #1)</div><div class="tbr-author">Rachel Gillig</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Two Twisted Crowns (The Shepherd King, #2)</div><div class="tbr-author">Rachel Gillig</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Extracurricular</div><div class="tbr-author">Rachel Lynn Solomon</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Metal Slinger (Fire &amp; Metal, #1)</div><div class="tbr-author">Rachel Schneider</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Annie Knows Everything</div><div class="tbr-author">Rachel Wood</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Burnout (Holland Brothers, #1)</div><div class="tbr-author">Rebecca Jenshak</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Divine Rivals (Letters of Enchantment, #1)</div><div class="tbr-author">Rebecca Ross</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Ruthless Vows (Letters of Enchantment, #2)</div><div class="tbr-author">Rebecca Ross</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Wild Reverence</div><div class="tbr-author">Rebecca Ross</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The House Across the Lake</div><div class="tbr-author">Riley Sager</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The New York Charm(Uptown Love #1)</div><div class="tbr-author">Riley Winters</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Bad Words</div><div class="tbr-author">Rioghnach Robinson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Hidden Valley Road: Inside the Mind of an American Family</div><div class="tbr-author">Robert Kolker</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Taming Mr. Walker (London Mister #1)</div><div class="tbr-author">Rosa Lucas</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Flame and Sparrow (Flame and Sparrow Duology, #1)</div><div class="tbr-author">S.M. Gaither</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Dire Bound (The Wolves of Ruin, #1)</div><div class="tbr-author">Sable Sorensen</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">I&#x27;m Looking for a Man in Finance</div><div class="tbr-author">Sabrina Waldorf</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Darling Girls</div><div class="tbr-author">Sally Hepworth</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Cosmic Kind of Love</div><div class="tbr-author">Samantha Young</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Don&#x27;t Forget to Write</div><div class="tbr-author">Sara Goodman Confino</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Don’t Forget to Write</div><div class="tbr-author">Sara Goodman Confino</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">True Biz</div><div class="tbr-author">Sara Nović</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">When the Moon Hatched(Moonfall, #1)</div><div class="tbr-author">Sarah A. Parker</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Love Walked In</div><div class="tbr-author">Sarah Chamberlain</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Book Club Hotel</div><div class="tbr-author">Sarah Morgan</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Christmas You Found Me(Heart of the Wilderness, #1)</div><div class="tbr-author">Sarah Morgenthaler</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Behind Her Eyes</div><div class="tbr-author">Sarah Pinborough</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Five Year Lie</div><div class="tbr-author">Sarina Bowen</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Rose Bargain (The Rose Bargain, #1)</div><div class="tbr-author">Sasha Peyton Smith</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Other Mistress</div><div class="tbr-author">Shanora Williams</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Small and the Mighty: Twelve Unsung Americans Who Changed the Course of History, from the Founding to the Civil Rights Movement</div><div class="tbr-author">Sharon McMahon</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Road to Christmas</div><div class="tbr-author">Sheila Roberts</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Remarkably Bright Creatures</div><div class="tbr-author">Shelby Van Pelt</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Ravishing the Heiress(Fitzhugh Trilogy, #2)</div><div class="tbr-author">Sherry Thomas</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Friend</div><div class="tbr-author">Sigrid Nunez</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Rent to Be</div><div class="tbr-author">Sonia Hartl</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Love, Naturally (Rock Bottom Love, #1)</div><div class="tbr-author">Sophie Sullivan</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Court This Cruel &amp; Lovely(Kingdom of Lies, #1)</div><div class="tbr-author">Stacia Stark</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">I&#x27;ve Got My Mind Set on Brew</div><div class="tbr-author">Stephanie Jayne</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Overdue</div><div class="tbr-author">Stephanie Perkins</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Kill for Me, Kill for You</div><div class="tbr-author">Steve Cavanagh</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The 7½ Deaths of Evelyn Hardcastle</div><div class="tbr-author">Stuart Turton</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Dog Who Saved Me</div><div class="tbr-author">Susan Wilson</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Our Ex&#x27;s Wedding</div><div class="tbr-author">Taleen Voskuni</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Get a Life, Chloe Brown (The Brown Sisters, #1)</div><div class="tbr-author">Talia Hibbert</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Wheelie Awkward Romance: The Love Story of a Girl Who Is Definitely Not Touchy-Feely and a Quadriplegic Guy Who Most Assuredly Is</div><div class="tbr-author">Tess Campbell</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">A Love Song for Ricki Wilde</div><div class="tbr-author">Tia Williams</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Seven Days in June</div><div class="tbr-author">Tia Williams</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Between the Lines (Great Missenden Ever After #1)</div><div class="tbr-author">Tracey Magruder</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Love&#x27;s a Witch (The Scottish Charms, #1)</div><div class="tbr-author">Tricia O&#x27;Malley</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">The Invisible Life of Addie LaRue</div><div class="tbr-author">V.E. Schwab</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Red Queen (Red Queen, #1)</div><div class="tbr-author">Victoria Aveyard</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Not Good Neighbors</div><div class="tbr-author">Violet Lumani</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">How to End a Love Story</div><div class="tbr-author">Yulin Kuang</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+    <div class="tbr-row"><div class="tbr-rank">·</div><div class="tbr-info"><div class="tbr-title">Kiss the Girl (Meant to Be, #3)</div><div class="tbr-author">Zoraida Córdova</div></div><div class="tbr-score"><span class="tbr-avg unknown">new</span></div></div>
+  </div>
 <script>
-(function() {
-  const months = [
-    ['Jan 2024',5],['Feb 2024',4],['Mar 2024',4],['Apr 2024',4],
-    ['May 2024',7],['Jun 2024',5],['Jul 2024',6],['Aug 2024',5],
-    ['Sep 2024',8],['Oct 2024',11],['Nov 2024',15],['Dec 2024',22],
-    ['Jan 2025',19],['Feb 2025',19],['Mar 2025',19],['Apr 2025',13],
-    ['May 2025',16],['Jun 2025',11],['Jul 2025',18],['Aug 2025',14],
-    ['Sep 2025',17],['Oct 2025',18],['Nov 2025',9],['Dec 2025',12],
-    ['Jan 2026',26],['Feb 2026',15],['Mar 2026',15],['Apr 2026',18],['May 2026',9]
-  ];
-  const peak = Math.max(...months.map(r=>r[1]));
-  const tbody = document.getElementById('volBody');
-  months.forEach(function(row) {
-    var tr = document.createElement('tr');
-    tr.className = 'vol-row';
-    var pct = Math.round(row[1]/peak*100);
-    tr.innerHTML = '<td class="vol-month">'+row[0]+'</td>'+
-      '<td><div class="vol-bar-wrap"><div class="vol-bar'+(row[1]===peak?' peak':'')+'" style="width:'+pct+'%"></div></div></td>'+
-      '<td class="vol-count">'+row[1]+'</td>';
-    tbody.appendChild(tr);
+const AUTHORS=[{"author": "Lynn Painter", "n": 13, "avg": 4.54, "five": 7, "titles": ["Accidentally Amy", "Better Than the Movies", "Betting on You", "Fake Skating", "First and Forever", "Happily Never After", "Maid for Each Other", "Mr. Wrong Number", "Nothing Like the Movies", "The Do-Over", "The Love Wager", "The Wish Switch"]}, {"author": "Elsie Silver", "n": 10, "avg": 4.2, "five": 4, "titles": ["Fever Dream", "Flawless", "Heartless", "Hopeless", "Powerless", "Reckless", "Wild Card", "Wild Eyes", "Wild Love", "Wild Side"]}, {"author": "Stephanie Archer", "n": 4, "avg": 3.75, "five": 0, "titles": ["Behind the Net", "Gloves Off", "The Fake Out", "The Wingman"]}, {"author": "Sarah J. Maas", "n": 10, "avg": 4.1, "five": 5, "titles": ["A Court of Frost and Starlight", "A Court of Mist and Fury", "A Court of Thorns and Roses", "A Court of Wings and Ruin", "A \u200bCourt of Silver Flames", "Crown of Midnight", "Heir of Fire", "Queen of Shadows", "The Assassin's Blade", "Throne of Glass"]}, {"author": "Elle Kennedy", "n": 3, "avg": 4.33, "five": 1, "titles": ["The Deal", "The Mistake", "The Score"]}, {"author": "Lauren Blakely", "n": 4, "avg": 3.25, "five": 0, "titles": ["It Seemed Like a Good Idea", "Merry Little Kissmas", "My Favorite Holidate", "The Real Deal"]}, {"author": "Katherine Center", "n": 4, "avg": 4.5, "five": 2, "titles": ["Everybody's Favorite Guy", "Hello Stranger", "The Bodyguard", "The Rom-Commers"]}, {"author": "B.K. Borison", "n": 3, "avg": 5.0, "five": 3, "titles": ["And Now, Back to You", "First-Time Caller", "Good Spirits"]}, {"author": "Abby Jimenez", "n": 10, "avg": 4.4, "five": 6, "titles": ["Just for the Summer", "Life\u2019s Too Short", "Part of Your World", "Say You'll Remember Me", "The Fall Risk", "The Friend Zone", "The Happy Ever After Playlist", "The Night We Met", "Worst Wingman Ever", "Yours Truly"]}, {"author": "Rick Riordan", "n": 5, "avg": 4.8, "five": 4, "titles": ["The Battle of the Labyrinth", "The Last Olympian", "The Lightning Thief", "The Sea of Monsters", "The Titan\u2019s Curse"]}, {"author": "Lana Ferguson", "n": 6, "avg": 3.5, "five": 0, "titles": ["Overruled", "The Fake Mate", "The Game Changer", "The Mating Game", "The Nanny", "Under Loch and Key"]}, {"author": "Stephanie Garber", "n": 3, "avg": 4.0, "five": 1, "titles": ["A Curse for True Love", "Once Upon a Broken Heart", "The Ballad of Never After"]}, {"author": "Ava Rani", "n": 4, "avg": 3.75, "five": 0, "titles": ["Out of Her League", "The Charmer", "The Heir: A Spicy CEO Billionaire Romance Where Forced Proximity Ignites Forbidden Scandal (Biotech Billionaires Book 2)", "The Spare"]}, {"author": "Christina Lauren", "n": 6, "avg": 4.5, "five": 4, "titles": ["Accidentally Yours", "Falling", "In a Holidaze", "The Exception to the Rule", "The Paradise Problem", "The Unhoneymooners"]}, {"author": "Liz Tomforde", "n": 6, "avg": 4.67, "five": 4, "titles": ["Caught Up", "In Her Own League", "Mile High", "Play Along", "Rewind It Back", "The Right Move"]}, {"author": "Meghan Quinn", "n": 9, "avg": 3.22, "five": 0, "titles": ["A Not So Meet Cute", "Bridesmaid Undercover", "Bridesmaid for Hire", "How My Neighbor Stole Christmas", "Just for the Cameras", "Merry Christmas, You Filthy Animal", "Resting Scrooge Face", "The Path to Loving Him", "Till Summer Do Us Part"]}, {"author": "Chloe Walsh", "n": 5, "avg": 5.0, "five": 5, "titles": ["Binding 13", "Keeping 13", "Redeeming 6", "Saving 6", "Taming 7"]}, {"author": "Tessa Bailey", "n": 12, "avg": 2.83, "five": 0, "titles": ["Catch Her If You Can", "Dream Girl Drama", "Fangirl Down", "Hook, Line, and Sinker", "It Happened One Summer", "Merry Ever After", "Pitcher Perfect", "Same Time Next Year", "Secretly Yours", "The Au Pair Affair", "Window Shopping", "Wreck the Halls"]}, {"author": "Raven Kennedy", "n": 6, "avg": 4.17, "five": 3, "titles": ["Gild", "Gleam", "Glint", "Glow", "Gold", "Goldfinch"]}, {"author": "Kay Marie", "n": 5, "avg": 4.4, "five": 2, "titles": ["Hot Pursuit", "Stolen Goods", "The Love Dare", "The Love Lie", "The Love Rematch"]}, {"author": "Hannah Bonam-Young", "n": 4, "avg": 2.75, "five": 0, "titles": ["Out of the Woods", "Out on a Limb", "People Watching", "Time Will Tell"]}, {"author": "Colleen Hoover", "n": 3, "avg": 1.67, "five": 0, "titles": ["It Ends with Us", "It Starts with Us", "Ugly Love"]}, {"author": "Sarah Adams", "n": 9, "avg": 4.56, "five": 6, "titles": ["Beg, Borrow, or Steal", "In Your Dreams", "Practice Makes Perfect", "The Cheat Sheet", "The Enemy", "The Match", "The Off Limits Rule", "The Rule Book", "When in Rome"]}, {"author": "Morgan Elizabeth", "n": 4, "avg": 4.0, "five": 0, "titles": ["Big Nick Energy", "The Bright Side of Christmas", "The Promise of Forever", "Tis the Season for Revenge"]}, {"author": "Piper Rayne", "n": 3, "avg": 2.0, "five": 0, "titles": ["Mr. Broody", "Mr. Heartbreaker", "Single and Ready to Jingle"]}, {"author": "Ali Hazelwood", "n": 15, "avg": 4.13, "five": 6, "titles": ["Below Zero", "Bound", "Bride", "Check & Mate", "Cruel Winter with You", "Deep End", "Hot for Slayer", "Love on the Brain", "Love, Theoretically", "Mate", "Not in Love", "Stuck with You", "The Love Hypothesis", "Two Can Play", "Under One Roof"]}, {"author": "Amy Daws", "n": 4, "avg": 3.25, "five": 0, "titles": ["Honeymoon Phase", "Nine Month Contract", "Seven Year Itch", "Wait With Me"]}, {"author": "Tahereh Mafi", "n": 9, "avg": 4.22, "five": 3, "titles": ["Believe Me", "Defy Me", "Ignite Me", "Imagine Me", "Restore Me", "Reveal Me", "Shadow Me", "Shatter Me", "Unravel Me"]}, {"author": "Lucy Score", "n": 12, "avg": 4.33, "five": 6, "titles": ["By a Thread", "Finally Mine", "Mr. Fixer Upper", "Pretend You're Mine", "Protecting What's Mine", "Riley Thorn and the Dead Guy Next Door", "Story of My Life", "The Blast from the Past", "The Body in the Backyard", "The Corpse in the Closet", "The Worst Best Man", "Things We Never Got Over"]}, {"author": "Lauren Roberts", "n": 3, "avg": 4.33, "five": 1, "titles": ["Fearless", "Powerless", "Reckless"]}, {"author": "Lauren Asher", "n": 3, "avg": 2.67, "five": 0, "titles": ["Final Offer", "Terms and Conditions", "The Fine Print"]}, {"author": "Emily Henry", "n": 3, "avg": 4.0, "five": 0, "titles": ["Funny Story", "Happy Place", "People We Meet on Vacation"]}, {"author": "Allie Samberts", "n": 3, "avg": 3.0, "five": 0, "titles": ["The Write Choice", "The Write Place", "The Write Time"]}, {"author": "Kay Cove", "n": 3, "avg": 4.33, "five": 1, "titles": ["Camera Shy", "Selfie", "Snapshot"]}, {"author": "Chelsea Curto", "n": 3, "avg": 4.0, "five": 0, "titles": ["Face Off", "Power Play", "Slap Shot"]}, {"author": "Ana Huang", "n": 3, "avg": 2.33, "five": 0, "titles": ["King of Wrath", "Twisted Games", "Twisted Love"]}, {"author": "Laura Pavlov", "n": 5, "avg": 2.4, "five": 0, "titles": ["Beating Heart", "Finding Hayes", "Forbidden King", "Loving Romeo", "Wild River"]}, {"author": "Hannah Grace", "n": 3, "avg": 3.0, "five": 0, "titles": ["Daydream", "Icebreaker", "Wildfire"]}, {"author": "Rebecca Yarros", "n": 3, "avg": 5.0, "five": 3, "titles": ["Fourth Wing", "Iron Flame", "Onyx Storm"]}, {"author": "Maren Moore", "n": 4, "avg": 2.75, "five": 0, "titles": ["A Festive Feud", "Homerun Proposal", "The Christmas List", "The Mistletoe Bet"]}, {"author": "Amy Award", "n": 5, "avg": 3.0, "five": 0, "titles": ["Honkers Under the Holly", "The Anaconda Downstairs", "The C*ck Down the Block", "The P*ssy Next Door", "The Wiener Across the Way"]}, {"author": "Jeneva Rose", "n": 4, "avg": 3.75, "five": 0, "titles": ["Home Is Where the Bodies Are", "It's a Date", "One of Us Is Dead", "The Perfect Marriage"]}, {"author": "Julia Quinn", "n": 3, "avg": 3.0, "five": 0, "titles": ["An Offer From a Gentleman", "Romancing Mister Bridgerton", "The Viscount Who Loved Me"]}];
+
+function renderAuthors(mode){
+  let a=[...AUTHORS];
+  if(mode==='rated'){a.sort((x,y)=>y.avg-x.avg||y.n-x.n||x.author.localeCompare(y.author));}
+  else{a.sort((x,y)=>y.n-x.n||y.avg-x.avg||x.author.localeCompare(y.author));}
+  let h='';
+  a.forEach((x,i)=>{
+    h+='<div class="author-row"><div class="author-rank">'+(i+1)+'</div><div class="author-info"><div class="author-name">'+x.author+'</div><div class="author-meta">'+x.n+' books · '+x.five+' five-star</div><div class="author-titles">'+x.titles.join(' · ')+'</div></div><div class="author-avg">'+x.avg.toFixed(2)+'★</div></div>';
   });
-})();
-
-// Author data — Mandy's actual ratings from review.json
-const authors = [
-  {name:'Ali Hazelwood',      books:15, avg:4.13, fives:6,  titles:['The Love Hypothesis','Love Theoretically','Check & Mate','Mate','Below Zero','Under One Roof','Love on the Brain','Stuck with You','Bride','Not in Love','Under Your Spell','Drawn Together','Battle of the Bookstores','Camera Shy','The Love Dare']},
-  {name:'Lynn Painter',       books:13, avg:4.46, fives:6,  titles:['Mr. Wrong Number','Better Than the Movies','Betting on You','Fake Skating','Accidentally Amy','Maid for Each Other','The Wish Switch','The Love Wager','Nothing Like the Movies','Happily Never After','First and Forever','Any Trope but You','The Exception to the Rule']},
-  {name:'Tessa Bailey',       books:12, avg:2.83, fives:0,  titles:['Pitcher Perfect','Wreck the Halls','Dream Girl Drama','The Au Pair Affair','Fangirl Down','Hook Line & Sinker','It Happened One Summer','Window Shopping','Catch Her If You Can','Secretly Yours','The Big Temptation','Dream Girl Drama']},
-  {name:'Lucy Score',         books:12, avg:4.33, fives:6,  titles:['Things We Never Got Over','By a Thread','Mr. Fixer Upper','Riley Thorn and the Dead Guy Next Door','The Body in the Backyard','Story of My Life','Not in My Book','The Blast from the Past','The Corpse in the Closet','Finally Mine','Pretend You\'re Mine','Protecting What\'s Mine']},
-  {name:'Sarah J. Maas',      books:10, avg:4.10, fives:5,  titles:['Throne of Glass','Crown of Midnight','Heir of Fire','Queen of Shadows','The Assassin\'s Blade','A Court of Mist and Fury','A Court of Wings and Ruin','A Court of Silver Flames','A Court of Thorns and Roses','A Court of Frost and Starlight']},
-  {name:'Abby Jimenez',       books:10, avg:4.40, fives:6,  titles:['Just for the Summer','Yours Truly','Part of Your World','Say You\'ll Remember Me','Worst Wingman Ever','The Fall Risk','The Happy Ever After Playlist','The Friend Zone','Life\'s Too Short','The Night We Met']},
-  {name:'Meghan Quinn',       books:9,  avg:3.22, fives:0,  titles:['Bridesmaid for Hire','Bridesmaid Undercover','The Faking Game','Puck Pact','The Real Deal','Till Summer Do Us Part','Just for the Cameras','Merry Christmas You Filthy Animal','Homerun Proposal']},
-  {name:'Sarah Adams',        books:9,  avg:4.56, fives:6,  titles:['Practice Makes Perfect','The Cheat Sheet','The Match','The Enemy','Beg Borrow or Steal','In Your Dreams','When in Rome','The Rule Book','The Off Limits Rule']},
-  {name:'Tahereh Mafi',       books:9,  avg:4.22, fives:3,  titles:['Ignite Me','Reveal Me','Believe Me','Defy Me','Shadow Me','Shatter Me','Unravel Me','Restore Me','Imagine Me']},
-  {name:'Elsie Silver',       books:9,  avg:4.11, fives:3,  titles:['Wild Love','Wild Eyes','Wild Card','Heartless','Hopeless','Powerless','Wild Side','Flawless','Truly Madly Deeply']},
-  {name:'Christina Lauren',   books:6,  avg:4.50, fives:4,  titles:['The Unhoneymooners','In a Holidaze','The Exception to the Rule','Accidentally Yours','The Paradise Problem','The Wedding People']},
-  {name:'Lana Ferguson',      books:6,  avg:3.50, fives:0,  titles:['The Nanny','Under Loch and Key','The Mating Game','The Fake Mate','Overruled','The Flatshare']},
-  {name:'Liz Tomforde',       books:6,  avg:4.67, fives:4,  titles:['The Right Move','Caught Up','Play Along','In Her Own League','Mile High','Rewind It Back']},
-  {name:'Raven Kennedy',      books:6,  avg:4.17, fives:3,  titles:['Glow','Gleam','Glint','Goldfinch','Gild','The Ashes & the Star-Cursed King']},
-  {name:'Rick Riordan',       books:5,  avg:4.80, fives:4,  titles:['The Lightning Thief','The Titan\'s Curse','The Battle of the Labyrinth','The Last Olympian','The Sea of Monsters']},
-  {name:'Chloe Walsh',        books:5,  avg:5.00, fives:5,  titles:['Binding 13','Keeping 13','Saving 6','Redeeming 6','Taming 7']},
-  {name:'Kay Marie',          books:5,  avg:4.40, fives:2,  titles:['Hot Pursuit','The Love Dare','Stolen Goods','The Love Lie','The Love Rematch']},
-  {name:'Laura Pavlov',       books:5,  avg:2.40, fives:0,  titles:['Loving Romeo','Wild River','Forbidden King','Beating Heart','Finding Hayes']},
-  {name:'Amy Award',          books:5,  avg:3.00, fives:0,  titles:['The C*ck Down the Block','The Wiener Across the Way','The P*ssy Next Door','The Anaconda Downstairs','Honkers Under the Holly']},
-  {name:'Katherine Center',   books:4,  avg:4.50, fives:2,  titles:['The Bodyguard','The Rom-Commers','Hello Stranger','Everybody\'s Favorite Guy']},
-  {name:'Stephanie Archer',   books:4,  avg:3.75, fives:0,  titles:['Behind the Net','The Fake Out','The Wingman','Gloves Off']},
-  {name:'Morgan Elizabeth',   books:4,  avg:4.00, fives:0,  titles:['Tis the Season for Revenge','Big Nick Energy','The Bright Side of Christmas','The Promise of Forever']},
-  {name:'Jeneva Rose',        books:4,  avg:3.75, fives:0,  titles:['The Perfect Marriage','One of Us Is Dead','Home Is Where the Bodies Are','It\'s a Date']},
-  {name:'Ava Rani',           books:4,  avg:3.75, fives:0,  titles:['The Spare','The Heir','The Charmer','Out of Her League']},
-  {name:'Hannah Bonam-Young', books:4,  avg:2.75, fives:0,  titles:['Out on a Limb','Out of the Woods','People Watching','Time Will Tell']},
-  {name:'Amy Daws',           books:4,  avg:3.25, fives:0,  titles:['Nine Month Contract','Seven Year Itch','Honeymoon Phase','Wait With Me']},
-  {name:'Maren Moore',        books:4,  avg:2.75, fives:0,  titles:['The Mistletoe Bet','A Festive Feud','The Christmas List','Homerun Proposal']},
-  {name:'Lauren Blakely',     books:4,  avg:3.25, fives:0,  titles:['My Favorite Holidate','Merry Little Kissmas','The Real Deal','It Seemed Like a Good Idea']},
-  {name:'B.K. Borison',       books:3,  avg:5.00, fives:3,  titles:['Good Spirits','First-Time Caller','And Now, Back to You']},
-  {name:'Elle Kennedy',       books:3,  avg:4.33, fives:1,  titles:['The Deal','The Mistake','The Score']},
-  {name:'Stephanie Garber',   books:3,  avg:4.00, fives:1,  titles:['The Ballad of Never After','A Curse for True Love','Once Upon a Broken Heart']},
-  {name:'Lauren Roberts',     books:3,  avg:4.33, fives:1,  titles:['Reckless','Powerless','Fearless']},
-  {name:'Kay Cove',           books:3,  avg:4.33, fives:1,  titles:['Camera Shy','Snapshot','Selfie']},
-  {name:'Chelsea Curto',      books:3,  avg:4.00, fives:0,  titles:['Face Off','Power Play','Slap Shot']},
-  {name:'Emily Henry',        books:3,  avg:4.00, fives:0,  titles:['People We Meet on Vacation','Funny Story','Happy Place']},
-  {name:'Rebecca Yarros',     books:3,  avg:5.00, fives:3,  titles:['Fourth Wing','Iron Flame','Onyx Storm']},
-  {name:'Allie Samberts',     books:3,  avg:3.00, fives:0,  titles:['The Write Place','The Write Time','The Write Choice']},
-  {name:'Julia Quinn',        books:3,  avg:3.00, fives:0,  titles:['The Viscount Who Loved Me','An Offer From a Gentleman','Romancing Mister Bridgerton']},
-  {name:'Hannah Grace',       books:3,  avg:3.00, fives:0,  titles:['Icebreaker','Wildfire','Daydream']},
-  {name:'Ana Huang',          books:3,  avg:2.33, fives:0,  titles:['Twisted Love','Twisted Games','King of Wrath']},
-  {name:'Lauren Asher',       books:3,  avg:2.67, fives:0,  titles:['The Fine Print','Terms and Conditions','Final Offer']},
-  {name:'Piper Rayne',        books:3,  avg:2.00, fives:0,  titles:['Mr. Heartbreaker','Mr. Broody','Single and Ready to Jingle']},
-  {name:'Colleen Hoover',     books:3,  avg:1.67, fives:0,  titles:['It Ends with Us','It Starts with Us','Ugly Love']},
-];
-
-const fiveStars = [
-  {title:'Harry Potter and the Chamber of Secrets', author:'J.K. Rowling'},
-  {title:'Queen of Shadows', author:'Sarah J. Maas'},
-  {title:'Preparing Your Daughter For Womanhood', author:'Robin Jones Gunn'},
-  {title:'The Deal', author:'Elle Kennedy'},
-  {title:'Harry Potter and the Sorcerer\'s Stone', author:'J.K. Rowling'},
-  {title:'Heir of Fire', author:'Sarah J. Maas'},
-  {title:'No Place Like You', author:'Jillian Meadows'},
-  {title:'The Assassin\'s Blade', author:'Sarah J. Maas'},
-  {title:'An Academic Affair', author:'Jodi McAlister'},
-  {title:'Crown of Midnight', author:'Sarah J. Maas'},
-  {title:'The Last Olympian', author:'Rick Riordan'},
-  {title:'And Now, Back to You', author:'B.K. Borison'},
-  {title:'The Ballad of Never After', author:'Stephanie Garber'},
-  {title:'Say You\'ll Remember Me', author:'Abby Jimenez'},
-  {title:'Throne of Glass', author:'Sarah J. Maas'},
-  {title:'First-Time Caller', author:'B.K. Borison'},
-  {title:'The Battle of the Labyrinth', author:'Rick Riordan'},
-  {title:'The Exception to the Rule', author:'Christina Lauren'},
-  {title:'In Her Own League', author:'Liz Tomforde'},
-  {title:'Caught Up', author:'Liz Tomforde'},
-  {title:'The Right Move', author:'Liz Tomforde'},
-  {title:'Fake Skating', author:'Lynn Painter'},
-  {title:'The Titan\'s Curse', author:'Rick Riordan'},
-  {title:'Hot Pursuit', author:'Kay Marie'},
-  {title:'Glow (The Plated Prisoner, #4)', author:'Raven Kennedy'},
-  {title:'Accidentally Yours', author:'Christina Lauren'},
-  {title:'The Love Dare', author:'Kay Marie'},
-  {title:'The Spellshop', author:'Sarah Beth Durst'},
-  {title:'Gleam (The Plated Prisoner, #3)', author:'Raven Kennedy'},
-  {title:'Glint (The Plated Prisoner, #2)', author:'Raven Kennedy'},
-  {title:'In Your Dreams', author:'Sarah Adams'},
-  {title:'Beg, Borrow, or Steal', author:'Sarah Adams'},
-  {title:'Practice Makes Perfect', author:'Sarah Adams'},
-  {title:'Good Spirits', author:'B.K. Borison'},
-  {title:'Brimstone (Fae & Alchemy, #2)', author:'Callie Hart'},
-  {title:'In a Holidaze', author:'Christina Lauren'},
-  {title:'The Very Secret Society of Irregular Witches', author:'Sangu Mandanna'},
-  {title:'If It Makes You Happy', author:'Julie Olivia'},
-  {title:'Drawn Together', author:'Juliana Smith'},
-  {title:'Believe Me (Shatter Me)', author:'Tahereh Mafi'},
-  {title:'Tweet Cute', author:'Emma Lord'},
-  {title:'Mate (Bride, #2)', author:'Ali Hazelwood'},
-  {title:'Reveal Me (Shatter Me)', author:'Tahereh Mafi'},
-  {title:'The Body in the Backyard', author:'Lucy Score'},
-  {title:'Riley Thorn and the Dead Guy Next Door', author:'Lucy Score'},
-  {title:'Ignite Me (Shatter Me, #3)', author:'Tahereh Mafi'},
-  {title:'Wild Card (Rose Hill, #4)', author:'Elsie Silver'},
-  {title:'Left of Forever', author:'Tarah Dewitt'},
-  {title:'Let\'s Make a Scene', author:'Laura Wood'},
-  {title:'The Wedding People', author:'Alison Espach'},
-  {title:'How to Get Revenge on a Cheating Ex', author:'Maggie Dallen'},
-  {title:'Maid for Each Other', author:'Lynn Painter'},
-  {title:'Under Your Spell', author:'Laura Wood'},
-  {title:'Below Zero', author:'Ali Hazelwood'},
-  {title:'Battle of the Bookstores', author:'Ali Brady'},
-  {title:'Camera Shy', author:'Kay Cove'},
-  {title:'Under One Roof', author:'Ali Hazelwood'},
-  {title:'The Kiss Quotient', author:'Helen Hoang'},
-  {title:'Love, Theoretically', author:'Ali Hazelwood'},
-  {title:'Any Trope but You', author:'Victoria Lavine'},
-  {title:'The Great Alone', author:'Kristin Hannah'},
-  {title:'Taming 7 (Boys of Tommen)', author:'Chloe Walsh'},
-  {title:'The Spanish Love Deception', author:'Elena Armas'},
-  {title:'Redeeming 6 (Boys of Tommen)', author:'Chloe Walsh'},
-  {title:'The Love Hypothesis', author:'Ali Hazelwood'},
-  {title:'Saving 6 (Boys of Tommen)', author:'Chloe Walsh'},
-  {title:'Not in My Book', author:'Katie Holt'},
-  {title:'Play Along (Windy City, #4)', author:'Liz Tomforde'},
-  {title:'Keeping 13 (Boys of Tommen)', author:'Chloe Walsh'},
-  {title:'Binding 13 (Boys of Tommen)', author:'Chloe Walsh'},
-  {title:'Story of My Life', author:'Lucy Score'},
-  {title:'Reckless (The Powerless Trilogy)', author:'Lauren Roberts'},
-  {title:'The Frozen River', author:'Ariel Lawhon'},
-  {title:'Iron Flame (The Empyrean, #2)', author:'Rebecca Yarros'},
-  {title:'Onyx Storm (The Empyrean, #3)', author:'Rebecca Yarros'},
-  {title:'Quicksilver (Fae & Alchemy, #1)', author:'Callie Hart'},
-  {title:'Here For The Cake', author:'Jennifer Millikin'},
-  {title:'The Sleight Before Christmas', author:'Kate Stewart'},
-  {title:'Mr. Wrong Number', author:'Lynn Painter'},
-  {title:'Betting on You', author:'Lynn Painter'},
-  {title:'The Plight Before Christmas', author:'Kate Stewart'},
-  {title:'Wild Eyes (Rose Hill, #2)', author:'Elsie Silver'},
-  {title:'Better Than the Movies', author:'Lynn Painter'},
-  {title:'The Unhoneymooners', author:'Christina Lauren'},
-  {title:'The Serpent and the Wings of Night', author:'Carissa Broadbent'},
-  {title:'Just for the Summer', author:'Abby Jimenez'},
-  {title:'The Rom-Commers', author:'Katherine Center'},
-  {title:'Yours Truly', author:'Abby Jimenez'},
-  {title:'The Enemy (It Happened in Charleston)', author:'Sarah Adams'},
-  {title:'The Match (It Happened in Charleston)', author:'Sarah Adams'},
-  {title:'Part of Your World', author:'Abby Jimenez'},
-  {title:'Fourth Wing (The Empyrean, #1)', author:'Rebecca Yarros'},
-  {title:'By a Thread', author:'Lucy Score'},
-  {title:'Mr. Fixer Upper', author:'Lucy Score'},
-  {title:'Worst Wingman Ever', author:'Abby Jimenez'},
-  {title:'The Cheat Sheet', author:'Sarah Adams'},
-  {title:'Coming Home: A Roadmap from Fearful to Fully Alive', author:'Layla Palmer'},
-  {title:'The Bodyguard', author:'Katherine Center'},
-  {title:'The Lightning Thief', author:'Rick Riordan'},
-  {title:'Accidentally Amy', author:'Lynn Painter'},
-  {title:'Savor It', author:'Tarah Dewitt'},
-  {title:'Check & Mate', author:'Ali Hazelwood'},
-  {title:'The Wish Switch', author:'Lynn Painter'},
-  {title:'The Fall Risk', author:'Abby Jimenez'},
-  {title:'Wild Love (Rose Hill, #1)', author:'Elsie Silver'},
-  {title:'Things We Never Got Over', author:'Lucy Score'},
-];
-
-function renderAuthors(sorted) {
-  document.getElementById('authorList').innerHTML = sorted.map((a, i) => `
-    <div class="author-row">
-      <div class="author-rank">${i+1}</div>
-      <div class="author-info">
-        <div class="author-name">${a.name}</div>
-        <div class="author-meta">${a.books} book${a.books>1?'s':''} · ${a.fives>0?a.fives+'× ★5':'no 5★'}</div>
-        <div class="author-titles">${a.titles.join(' · ')}</div>
-      </div>
-      <div class="author-avg">${a.avg.toFixed(2)} <span class="star-gold">★</span></div>
-    </div>`).join('');
+  document.getElementById('authorList').innerHTML=h;
 }
-
-function sortAuthors(by) {
-  document.getElementById('sortBooks').classList.toggle('active', by==='books');
-  document.getElementById('sortAvg').classList.toggle('active', by==='avg');
-  renderAuthors([...authors].sort((a,b) => by==='avg' ? b.avg-a.avg : b.books-a.books));
+function sortAuthors(mode){
+  document.getElementById('btnRead').classList.toggle('active',mode==='read');
+  document.getElementById('btnRated').classList.toggle('active',mode==='rated');
+  renderAuthors(mode);
 }
+renderAuthors('read');
 
-renderAuthors([...authors].sort((a,b) => b.books-a.books));
-
-document.getElementById('fiveList').innerHTML = fiveStars.map(b => `
-  <div class="fivelist-item">
-    <div class="five-star">★</div>
-    <div class="five-info">
-      <div class="five-title">${b.title}</div>
-      <div class="five-author">${b.author}</div>
-    </div>
-  </div>`).join('');
 </script>
+</div>
 </body>
 </html>
