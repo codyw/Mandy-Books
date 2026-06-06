@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mandy's Reading Stats</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root {
+  --cream:     #faf7f2;
+  --ink:       #2e2a25;
+  --ink-light: #8a8078;
+  --card-bg:   #ffffff;
+  --border:    #ede8e0;
+  --mandy:     #e05c87;
+  --mandy-bg:  #fdf0f5;
+  --mandy-mid: #f5c2d3;
+  --radius:    14px;
+  --shadow:    0 2px 12px rgba(0,0,0,0.07);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito','Quicksand',system-ui,-apple-system,sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.5;padding-bottom:40px;}
+.container{max-width:680px;margin:0 auto;padding:24px 16px;}
+.page-header{text-align:center;margin-bottom:28px;}
+.page-header-label{font-size:11px;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--mandy);margin-bottom:6px;}
+.page-header-name{font-size:28px;font-weight:900;color:var(--ink);letter-spacing:-0.02em;margin-bottom:2px;}
+.page-header-sub{font-size:13px;color:var(--ink-light);}
+.section-title{font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-light);margin:28px 0 12px;text-align:center;}
+.hero-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.hero-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 12px;text-align:center;}
+.hero-card.accent{background:var(--mandy);}
+.hero-card.accent .hero-num,.hero-card.accent .hero-lbl{color:#fff;}
+.hero-card.accent .hero-lbl{opacity:0.8;}
+.hero-num{font-size:28px;font-weight:900;color:var(--mandy);line-height:1.1;letter-spacing:-0.02em;}
+.hero-lbl{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-light);margin-top:4px;}
+.star-gold{color:#f4b942;}
+.dist-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-bottom:10px;}
+.dist-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.dist-row:last-child{margin-bottom:0;}
+.dist-star{font-size:13px;font-weight:800;color:var(--ink);min-width:22px;text-align:right;}
+.dist-bar-wrap{flex:1;background:var(--border);border-radius:99px;height:10px;overflow:hidden;}
+.dist-bar{height:100%;border-radius:99px;background:var(--mandy);}
+.dist-count{font-size:13px;font-weight:700;color:var(--ink-light);min-width:28px;text-align:right;}
+.year-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.year-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 12px;text-align:center;}
+.year-label{font-size:12px;font-weight:800;letter-spacing:0.1em;color:var(--ink-light);margin-bottom:8px;}
+.year-count{font-size:26px;font-weight:900;color:var(--mandy);line-height:1;letter-spacing:-0.02em;}
+.year-unit{font-size:11px;color:var(--ink-light);margin-bottom:8px;}
+.year-avg{display:inline-block;background:var(--mandy-bg);color:var(--mandy);font-size:12px;font-weight:800;padding:3px 8px;border-radius:99px;}
+.year-five{font-size:11px;color:var(--ink-light);margin-top:5px;}
+.vol-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.vol-table{width:100%;border-collapse:collapse;}
+.vol-table th{font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-light);padding:10px 14px;text-align:left;border-bottom:2px solid var(--border);}
+.vol-table th.right{text-align:right;}
+.vol-row td{padding:9px 14px;border-bottom:1px solid var(--border);font-size:14px;vertical-align:middle;}
+.vol-row:last-child td{border-bottom:none;}
+.vol-month{font-weight:700;color:var(--ink);}
+.vol-bar-wrap{width:100%;background:var(--border);border-radius:99px;height:8px;}
+.vol-bar{height:100%;border-radius:99px;background:var(--mandy-mid);}
+.vol-bar.peak{background:var(--mandy);}
+.vol-count{font-weight:900;color:var(--ink);text-align:right;white-space:nowrap;}
+.author-controls{display:flex;gap:8px;margin-bottom:12px;justify-content:center;}
+.sort-btn{background:var(--card-bg);border:1px solid var(--border);border-radius:99px;padding:6px 14px;font-family:inherit;font-size:12px;font-weight:700;color:var(--ink-light);cursor:pointer;transition:all 0.15s;}
+.sort-btn.active{background:var(--mandy);color:#fff;border-color:var(--mandy);}
+.author-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;}
+.author-row{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
+.author-row:last-child{border-bottom:none;}
+.author-rank{font-size:12px;font-weight:900;color:var(--mandy-mid);min-width:20px;flex-shrink:0;padding-top:2px;}
+.author-info{flex:1;min-width:0;}
+.author-name{font-size:14px;font-weight:800;color:var(--ink);}
+.author-meta{font-size:12px;color:var(--ink-light);margin-top:1px;}
+.author-titles{font-size:11px;color:var(--ink-light);margin-top:4px;line-height:1.6;}
+.author-avg{font-size:14px;font-weight:900;color:var(--mandy);flex-shrink:0;padding-top:2px;}
+.fivelist-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;}
+.fivelist-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);}
+.fivelist-item:last-child{border-bottom:none;}
+.five-star{color:var(--mandy);font-size:13px;flex-shrink:0;padding-top:2px;}
+.five-info{flex:1;}
+.five-title{font-weight:700;color:var(--ink);font-size:14px;}
+.five-author{font-size:12px;color:var(--ink-light);}
+.pill{display:inline-block;background:var(--mandy-bg);color:var(--mandy);font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px;}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="page-header">
+    <div class="page-header-label">Reading Stats</div>
+    <div class="page-header-name">Mandy</div>
+    <div class="page-header-sub">Personal library · All-time</div>
+  </div>
+
+  <div class="hero-row">
+    <div class="hero-card accent">
+      <div class="hero-num">388</div>
+      <div class="hero-lbl">Books Rated</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-num">3.70</div>
+      <div class="hero-lbl">Mandy's Avg <span class="star-gold">★</span></div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-num">105</div>
+      <div class="hero-lbl">Five-Stars</div>
+    </div>
+  </div>
+
+  <div class="section-title">Rating Breakdown</div>
+  <div class="dist-card">
+    <div class="dist-row"><div class="dist-star">5★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:81%"></div></div><div class="dist-count">105</div></div>
+    <div class="dist-row"><div class="dist-star">4★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:100%"></div></div><div class="dist-count">130</div></div>
+    <div class="dist-row"><div class="dist-star">3★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:74%"></div></div><div class="dist-count">96</div></div>
+    <div class="dist-row"><div class="dist-star">2★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:34%"></div></div><div class="dist-count">44</div></div>
+    <div class="dist-row"><div class="dist-star">1★</div><div class="dist-bar-wrap"><div class="dist-bar" style="width:10%"></div></div><div class="dist-count">13</div></div>
+  </div>
+
+  <div class="section-title">By Year</div>
+  <div class="year-grid">
+    <div class="year-card">
+      <div class="year-label">2024</div>
+      <div class="year-count">96</div>
+      <div class="year-unit">books rated</div>
+      <div class="year-avg">avg 3.47 ★</div>
+      <div class="year-five">20 five-stars</div>
+    </div>
+    <div class="year-card">
+      <div class="year-label">2025</div>
+      <div class="year-count">185</div>
+      <div class="year-unit">books rated</div>
+      <div class="year-avg">avg 3.64 ★</div>
+      <div class="year-five">44 five-stars</div>
+    </div>
+    <div class="year-card">
+      <div class="year-label">2026</div>
+      <div class="year-count">81</div>
+      <div class="year-unit">books rated</div>
+      <div class="year-avg">avg 4.09 ★</div>
+      <div class="year-five">33 five-stars</div>
+    </div>
+  </div>
+
+  <div class="section-title">Monthly Reading Volume</div>
+  <div class="vol-card">
+    <table class="vol-table">
+      <thead><tr><th>Month</th><th>Volume</th><th class="right">Books</th></tr></thead>
+      <tbody id="volBody"></tbody>
+    </table>
+  </div>
+
+  <div class="section-title">By Author <span class="pill">3+ books read</span></div>
+  <div class="author-controls">
+    <button class="sort-btn active" id="sortBooks" onclick="sortAuthors('books')">Most Read</button>
+    <button class="sort-btn" id="sortAvg" onclick="sortAuthors('avg')">Highest Rated</button>
+  </div>
+  <div class="author-card" id="authorList"></div>
+
+  <div class="section-title">All Five-Star Reads <span class="pill">105</span></div>
+  <div class="fivelist-card" id="fiveList"></div>
+
+
+
+</div>
+<script>
+(function() {
+  const months = [
+    ['Jan 2024',5],['Feb 2024',4],['Mar 2024',4],['Apr 2024',4],
+    ['May 2024',7],['Jun 2024',5],['Jul 2024',6],['Aug 2024',5],
+    ['Sep 2024',8],['Oct 2024',11],['Nov 2024',15],['Dec 2024',22],
+    ['Jan 2025',19],['Feb 2025',19],['Mar 2025',19],['Apr 2025',13],
+    ['May 2025',16],['Jun 2025',11],['Jul 2025',18],['Aug 2025',14],
+    ['Sep 2025',17],['Oct 2025',18],['Nov 2025',9],['Dec 2025',12],
+    ['Jan 2026',26],['Feb 2026',15],['Mar 2026',15],['Apr 2026',18],['May 2026',9]
+  ];
+  const peak = Math.max(...months.map(r=>r[1]));
+  const tbody = document.getElementById('volBody');
+  months.forEach(function(row) {
+    var tr = document.createElement('tr');
+    tr.className = 'vol-row';
+    var pct = Math.round(row[1]/peak*100);
+    tr.innerHTML = '<td class="vol-month">'+row[0]+'</td>'+
+      '<td><div class="vol-bar-wrap"><div class="vol-bar'+(row[1]===peak?' peak':'')+'" style="width:'+pct+'%"></div></div></td>'+
+      '<td class="vol-count">'+row[1]+'</td>';
+    tbody.appendChild(tr);
+  });
+})();
+
+// Author data — Mandy's actual ratings from review.json
+const authors = [
+  {name:'Ali Hazelwood',      books:15, avg:4.13, fives:6,  titles:['The Love Hypothesis','Love Theoretically','Check & Mate','Mate','Below Zero','Under One Roof','Love on the Brain','Stuck with You','Bride','Not in Love','Under Your Spell','Drawn Together','Battle of the Bookstores','Camera Shy','The Love Dare']},
+  {name:'Lynn Painter',       books:13, avg:4.46, fives:6,  titles:['Mr. Wrong Number','Better Than the Movies','Betting on You','Fake Skating','Accidentally Amy','Maid for Each Other','The Wish Switch','The Love Wager','Nothing Like the Movies','Happily Never After','First and Forever','Any Trope but You','The Exception to the Rule']},
+  {name:'Tessa Bailey',       books:12, avg:2.83, fives:0,  titles:['Pitcher Perfect','Wreck the Halls','Dream Girl Drama','The Au Pair Affair','Fangirl Down','Hook Line & Sinker','It Happened One Summer','Window Shopping','Catch Her If You Can','Secretly Yours','The Big Temptation','Dream Girl Drama']},
+  {name:'Lucy Score',         books:12, avg:4.33, fives:6,  titles:['Things We Never Got Over','By a Thread','Mr. Fixer Upper','Riley Thorn and the Dead Guy Next Door','The Body in the Backyard','Story of My Life','Not in My Book','The Blast from the Past','The Corpse in the Closet','Finally Mine','Pretend You\'re Mine','Protecting What\'s Mine']},
+  {name:'Sarah J. Maas',      books:10, avg:4.10, fives:5,  titles:['Throne of Glass','Crown of Midnight','Heir of Fire','Queen of Shadows','The Assassin\'s Blade','A Court of Mist and Fury','A Court of Wings and Ruin','A Court of Silver Flames','A Court of Thorns and Roses','A Court of Frost and Starlight']},
+  {name:'Abby Jimenez',       books:10, avg:4.40, fives:6,  titles:['Just for the Summer','Yours Truly','Part of Your World','Say You\'ll Remember Me','Worst Wingman Ever','The Fall Risk','The Happy Ever After Playlist','The Friend Zone','Life\'s Too Short','The Night We Met']},
+  {name:'Meghan Quinn',       books:9,  avg:3.22, fives:0,  titles:['Bridesmaid for Hire','Bridesmaid Undercover','The Faking Game','Puck Pact','The Real Deal','Till Summer Do Us Part','Just for the Cameras','Merry Christmas You Filthy Animal','Homerun Proposal']},
+  {name:'Sarah Adams',        books:9,  avg:4.56, fives:6,  titles:['Practice Makes Perfect','The Cheat Sheet','The Match','The Enemy','Beg Borrow or Steal','In Your Dreams','When in Rome','The Rule Book','The Off Limits Rule']},
+  {name:'Tahereh Mafi',       books:9,  avg:4.22, fives:3,  titles:['Ignite Me','Reveal Me','Believe Me','Defy Me','Shadow Me','Shatter Me','Unravel Me','Restore Me','Imagine Me']},
+  {name:'Elsie Silver',       books:9,  avg:4.11, fives:3,  titles:['Wild Love','Wild Eyes','Wild Card','Heartless','Hopeless','Powerless','Wild Side','Flawless','Truly Madly Deeply']},
+  {name:'Christina Lauren',   books:6,  avg:4.50, fives:4,  titles:['The Unhoneymooners','In a Holidaze','The Exception to the Rule','Accidentally Yours','The Paradise Problem','The Wedding People']},
+  {name:'Lana Ferguson',      books:6,  avg:3.50, fives:0,  titles:['The Nanny','Under Loch and Key','The Mating Game','The Fake Mate','Overruled','The Flatshare']},
+  {name:'Liz Tomforde',       books:6,  avg:4.67, fives:4,  titles:['The Right Move','Caught Up','Play Along','In Her Own League','Mile High','Rewind It Back']},
+  {name:'Raven Kennedy',      books:6,  avg:4.17, fives:3,  titles:['Glow','Gleam','Glint','Goldfinch','Gild','The Ashes & the Star-Cursed King']},
+  {name:'Rick Riordan',       books:5,  avg:4.80, fives:4,  titles:['The Lightning Thief','The Titan\'s Curse','The Battle of the Labyrinth','The Last Olympian','The Sea of Monsters']},
+  {name:'Chloe Walsh',        books:5,  avg:5.00, fives:5,  titles:['Binding 13','Keeping 13','Saving 6','Redeeming 6','Taming 7']},
+  {name:'Kay Marie',          books:5,  avg:4.40, fives:2,  titles:['Hot Pursuit','The Love Dare','Stolen Goods','The Love Lie','The Love Rematch']},
+  {name:'Laura Pavlov',       books:5,  avg:2.40, fives:0,  titles:['Loving Romeo','Wild River','Forbidden King','Beating Heart','Finding Hayes']},
+  {name:'Amy Award',          books:5,  avg:3.00, fives:0,  titles:['The C*ck Down the Block','The Wiener Across the Way','The P*ssy Next Door','The Anaconda Downstairs','Honkers Under the Holly']},
+  {name:'Katherine Center',   books:4,  avg:4.50, fives:2,  titles:['The Bodyguard','The Rom-Commers','Hello Stranger','Everybody\'s Favorite Guy']},
+  {name:'Stephanie Archer',   books:4,  avg:3.75, fives:0,  titles:['Behind the Net','The Fake Out','The Wingman','Gloves Off']},
+  {name:'Morgan Elizabeth',   books:4,  avg:4.00, fives:0,  titles:['Tis the Season for Revenge','Big Nick Energy','The Bright Side of Christmas','The Promise of Forever']},
+  {name:'Jeneva Rose',        books:4,  avg:3.75, fives:0,  titles:['The Perfect Marriage','One of Us Is Dead','Home Is Where the Bodies Are','It\'s a Date']},
+  {name:'Ava Rani',           books:4,  avg:3.75, fives:0,  titles:['The Spare','The Heir','The Charmer','Out of Her League']},
+  {name:'Hannah Bonam-Young', books:4,  avg:2.75, fives:0,  titles:['Out on a Limb','Out of the Woods','People Watching','Time Will Tell']},
+  {name:'Amy Daws',           books:4,  avg:3.25, fives:0,  titles:['Nine Month Contract','Seven Year Itch','Honeymoon Phase','Wait With Me']},
+  {name:'Maren Moore',        books:4,  avg:2.75, fives:0,  titles:['The Mistletoe Bet','A Festive Feud','The Christmas List','Homerun Proposal']},
+  {name:'Lauren Blakely',     books:4,  avg:3.25, fives:0,  titles:['My Favorite Holidate','Merry Little Kissmas','The Real Deal','It Seemed Like a Good Idea']},
+  {name:'B.K. Borison',       books:3,  avg:5.00, fives:3,  titles:['Good Spirits','First-Time Caller','And Now, Back to You']},
+  {name:'Elle Kennedy',       books:3,  avg:4.33, fives:1,  titles:['The Deal','The Mistake','The Score']},
+  {name:'Stephanie Garber',   books:3,  avg:4.00, fives:1,  titles:['The Ballad of Never After','A Curse for True Love','Once Upon a Broken Heart']},
+  {name:'Lauren Roberts',     books:3,  avg:4.33, fives:1,  titles:['Reckless','Powerless','Fearless']},
+  {name:'Kay Cove',           books:3,  avg:4.33, fives:1,  titles:['Camera Shy','Snapshot','Selfie']},
+  {name:'Chelsea Curto',      books:3,  avg:4.00, fives:0,  titles:['Face Off','Power Play','Slap Shot']},
+  {name:'Emily Henry',        books:3,  avg:4.00, fives:0,  titles:['People We Meet on Vacation','Funny Story','Happy Place']},
+  {name:'Rebecca Yarros',     books:3,  avg:5.00, fives:3,  titles:['Fourth Wing','Iron Flame','Onyx Storm']},
+  {name:'Allie Samberts',     books:3,  avg:3.00, fives:0,  titles:['The Write Place','The Write Time','The Write Choice']},
+  {name:'Julia Quinn',        books:3,  avg:3.00, fives:0,  titles:['The Viscount Who Loved Me','An Offer From a Gentleman','Romancing Mister Bridgerton']},
+  {name:'Hannah Grace',       books:3,  avg:3.00, fives:0,  titles:['Icebreaker','Wildfire','Daydream']},
+  {name:'Ana Huang',          books:3,  avg:2.33, fives:0,  titles:['Twisted Love','Twisted Games','King of Wrath']},
+  {name:'Lauren Asher',       books:3,  avg:2.67, fives:0,  titles:['The Fine Print','Terms and Conditions','Final Offer']},
+  {name:'Piper Rayne',        books:3,  avg:2.00, fives:0,  titles:['Mr. Heartbreaker','Mr. Broody','Single and Ready to Jingle']},
+  {name:'Colleen Hoover',     books:3,  avg:1.67, fives:0,  titles:['It Ends with Us','It Starts with Us','Ugly Love']},
+];
+
+const fiveStars = [
+  {title:'Harry Potter and the Chamber of Secrets', author:'J.K. Rowling'},
+  {title:'Queen of Shadows', author:'Sarah J. Maas'},
+  {title:'Preparing Your Daughter For Womanhood', author:'Robin Jones Gunn'},
+  {title:'The Deal', author:'Elle Kennedy'},
+  {title:'Harry Potter and the Sorcerer\'s Stone', author:'J.K. Rowling'},
+  {title:'Heir of Fire', author:'Sarah J. Maas'},
+  {title:'No Place Like You', author:'Jillian Meadows'},
+  {title:'The Assassin\'s Blade', author:'Sarah J. Maas'},
+  {title:'An Academic Affair', author:'Jodi McAlister'},
+  {title:'Crown of Midnight', author:'Sarah J. Maas'},
+  {title:'The Last Olympian', author:'Rick Riordan'},
+  {title:'And Now, Back to You', author:'B.K. Borison'},
+  {title:'The Ballad of Never After', author:'Stephanie Garber'},
+  {title:'Say You\'ll Remember Me', author:'Abby Jimenez'},
+  {title:'Throne of Glass', author:'Sarah J. Maas'},
+  {title:'First-Time Caller', author:'B.K. Borison'},
+  {title:'The Battle of the Labyrinth', author:'Rick Riordan'},
+  {title:'The Exception to the Rule', author:'Christina Lauren'},
+  {title:'In Her Own League', author:'Liz Tomforde'},
+  {title:'Caught Up', author:'Liz Tomforde'},
+  {title:'The Right Move', author:'Liz Tomforde'},
+  {title:'Fake Skating', author:'Lynn Painter'},
+  {title:'The Titan\'s Curse', author:'Rick Riordan'},
+  {title:'Hot Pursuit', author:'Kay Marie'},
+  {title:'Glow (The Plated Prisoner, #4)', author:'Raven Kennedy'},
+  {title:'Accidentally Yours', author:'Christina Lauren'},
+  {title:'The Love Dare', author:'Kay Marie'},
+  {title:'The Spellshop', author:'Sarah Beth Durst'},
+  {title:'Gleam (The Plated Prisoner, #3)', author:'Raven Kennedy'},
+  {title:'Glint (The Plated Prisoner, #2)', author:'Raven Kennedy'},
+  {title:'In Your Dreams', author:'Sarah Adams'},
+  {title:'Beg, Borrow, or Steal', author:'Sarah Adams'},
+  {title:'Practice Makes Perfect', author:'Sarah Adams'},
+  {title:'Good Spirits', author:'B.K. Borison'},
+  {title:'Brimstone (Fae & Alchemy, #2)', author:'Callie Hart'},
+  {title:'In a Holidaze', author:'Christina Lauren'},
+  {title:'The Very Secret Society of Irregular Witches', author:'Sangu Mandanna'},
+  {title:'If It Makes You Happy', author:'Julie Olivia'},
+  {title:'Drawn Together', author:'Juliana Smith'},
+  {title:'Believe Me (Shatter Me)', author:'Tahereh Mafi'},
+  {title:'Tweet Cute', author:'Emma Lord'},
+  {title:'Mate (Bride, #2)', author:'Ali Hazelwood'},
+  {title:'Reveal Me (Shatter Me)', author:'Tahereh Mafi'},
+  {title:'The Body in the Backyard', author:'Lucy Score'},
+  {title:'Riley Thorn and the Dead Guy Next Door', author:'Lucy Score'},
+  {title:'Ignite Me (Shatter Me, #3)', author:'Tahereh Mafi'},
+  {title:'Wild Card (Rose Hill, #4)', author:'Elsie Silver'},
+  {title:'Left of Forever', author:'Tarah Dewitt'},
+  {title:'Let\'s Make a Scene', author:'Laura Wood'},
+  {title:'The Wedding People', author:'Alison Espach'},
+  {title:'How to Get Revenge on a Cheating Ex', author:'Maggie Dallen'},
+  {title:'Maid for Each Other', author:'Lynn Painter'},
+  {title:'Under Your Spell', author:'Laura Wood'},
+  {title:'Below Zero', author:'Ali Hazelwood'},
+  {title:'Battle of the Bookstores', author:'Ali Brady'},
+  {title:'Camera Shy', author:'Kay Cove'},
+  {title:'Under One Roof', author:'Ali Hazelwood'},
+  {title:'The Kiss Quotient', author:'Helen Hoang'},
+  {title:'Love, Theoretically', author:'Ali Hazelwood'},
+  {title:'Any Trope but You', author:'Victoria Lavine'},
+  {title:'The Great Alone', author:'Kristin Hannah'},
+  {title:'Taming 7 (Boys of Tommen)', author:'Chloe Walsh'},
+  {title:'The Spanish Love Deception', author:'Elena Armas'},
+  {title:'Redeeming 6 (Boys of Tommen)', author:'Chloe Walsh'},
+  {title:'The Love Hypothesis', author:'Ali Hazelwood'},
+  {title:'Saving 6 (Boys of Tommen)', author:'Chloe Walsh'},
+  {title:'Not in My Book', author:'Katie Holt'},
+  {title:'Play Along (Windy City, #4)', author:'Liz Tomforde'},
+  {title:'Keeping 13 (Boys of Tommen)', author:'Chloe Walsh'},
+  {title:'Binding 13 (Boys of Tommen)', author:'Chloe Walsh'},
+  {title:'Story of My Life', author:'Lucy Score'},
+  {title:'Reckless (The Powerless Trilogy)', author:'Lauren Roberts'},
+  {title:'The Frozen River', author:'Ariel Lawhon'},
+  {title:'Iron Flame (The Empyrean, #2)', author:'Rebecca Yarros'},
+  {title:'Onyx Storm (The Empyrean, #3)', author:'Rebecca Yarros'},
+  {title:'Quicksilver (Fae & Alchemy, #1)', author:'Callie Hart'},
+  {title:'Here For The Cake', author:'Jennifer Millikin'},
+  {title:'The Sleight Before Christmas', author:'Kate Stewart'},
+  {title:'Mr. Wrong Number', author:'Lynn Painter'},
+  {title:'Betting on You', author:'Lynn Painter'},
+  {title:'The Plight Before Christmas', author:'Kate Stewart'},
+  {title:'Wild Eyes (Rose Hill, #2)', author:'Elsie Silver'},
+  {title:'Better Than the Movies', author:'Lynn Painter'},
+  {title:'The Unhoneymooners', author:'Christina Lauren'},
+  {title:'The Serpent and the Wings of Night', author:'Carissa Broadbent'},
+  {title:'Just for the Summer', author:'Abby Jimenez'},
+  {title:'The Rom-Commers', author:'Katherine Center'},
+  {title:'Yours Truly', author:'Abby Jimenez'},
+  {title:'The Enemy (It Happened in Charleston)', author:'Sarah Adams'},
+  {title:'The Match (It Happened in Charleston)', author:'Sarah Adams'},
+  {title:'Part of Your World', author:'Abby Jimenez'},
+  {title:'Fourth Wing (The Empyrean, #1)', author:'Rebecca Yarros'},
+  {title:'By a Thread', author:'Lucy Score'},
+  {title:'Mr. Fixer Upper', author:'Lucy Score'},
+  {title:'Worst Wingman Ever', author:'Abby Jimenez'},
+  {title:'The Cheat Sheet', author:'Sarah Adams'},
+  {title:'Coming Home: A Roadmap from Fearful to Fully Alive', author:'Layla Palmer'},
+  {title:'The Bodyguard', author:'Katherine Center'},
+  {title:'The Lightning Thief', author:'Rick Riordan'},
+  {title:'Accidentally Amy', author:'Lynn Painter'},
+  {title:'Savor It', author:'Tarah Dewitt'},
+  {title:'Check & Mate', author:'Ali Hazelwood'},
+  {title:'The Wish Switch', author:'Lynn Painter'},
+  {title:'The Fall Risk', author:'Abby Jimenez'},
+  {title:'Wild Love (Rose Hill, #1)', author:'Elsie Silver'},
+  {title:'Things We Never Got Over', author:'Lucy Score'},
+];
+
+function renderAuthors(sorted) {
+  document.getElementById('authorList').innerHTML = sorted.map((a, i) => `
+    <div class="author-row">
+      <div class="author-rank">${i+1}</div>
+      <div class="author-info">
+        <div class="author-name">${a.name}</div>
+        <div class="author-meta">${a.books} book${a.books>1?'s':''} · ${a.fives>0?a.fives+'× ★5':'no 5★'}</div>
+        <div class="author-titles">${a.titles.join(' · ')}</div>
+      </div>
+      <div class="author-avg">${a.avg.toFixed(2)} <span class="star-gold">★</span></div>
+    </div>`).join('');
+}
+
+function sortAuthors(by) {
+  document.getElementById('sortBooks').classList.toggle('active', by==='books');
+  document.getElementById('sortAvg').classList.toggle('active', by==='avg');
+  renderAuthors([...authors].sort((a,b) => by==='avg' ? b.avg-a.avg : b.books-a.books));
+}
+
+renderAuthors([...authors].sort((a,b) => b.books-a.books));
+
+document.getElementById('fiveList').innerHTML = fiveStars.map(b => `
+  <div class="fivelist-item">
+    <div class="five-star">★</div>
+    <div class="five-info">
+      <div class="five-title">${b.title}</div>
+      <div class="five-author">${b.author}</div>
+    </div>
+  </div>`).join('');
+</script>
+</body>
+</html>
